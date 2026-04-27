@@ -1,0 +1,214 @@
+{
+  "nav": {
+    "nosotros": "Nosotros",
+    "plataforma": "Plataforma",
+    "ingredientes": "Ingredientes",
+    "mercados": "Mercados",
+    "ciencia": "Ciencia",
+    "contacto": "Contacto",
+    "cta": "Hablemos"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Plataforma de valorización vitivinícola",
+      "headline": "De la uva a la salud: valorización total de la biomasa",
+      "subheadline": "Transformamos lo que la industria del vino descarta en ingredientes bioactivos que mejoran vidas. Origen Mendoza. Ciencia validada. Co-creación real.",
+      "cta_primary": "Conocé la plataforma",
+      "cta_secondary": "Hablemos"
+    },
+    "stats": {
+      "label1": "Industria global del vino",
+      "value1": "USD 400.000M",
+      "label2": "Biomasa vitivinícola sin valorizar",
+      "value2": "70–80%",
+      "label3": "Mercado nutraceútico global",
+      "value3": "USD 300.000M"
+    },
+    "problem": {
+      "eyebrow": "El problema que resolvemos",
+      "headline": "La industria del vino aprovecha el jugo. El resto, lo descarta.",
+      "body": "Entre el 70% y el 80% de la biomasa generada por el proceso de vinificación no se utiliza en productos de alto valor. Esas pieles, semillas y sarmientos contienen los compuestos biológicamente más potentes de toda la planta. Qualab convierte esa brecha en oportunidad."
+    },
+    "ingredients": {
+      "eyebrow": "Nuestros ingredientes",
+      "headline": "Activos naturales de origen vitivinícola",
+      "colorante": {
+        "name": "Colorante Natural de Uva",
+        "desc": "Antocianinas estabilizadas de pieles de uva tinta. El rojo de la uva, listo para la industria.",
+        "tag": "Destacado"
+      },
+      "aceite": {
+        "name": "Aceite de Pepita de Uva",
+        "desc": "Aceite prensado en frío, rico en ácidos grasos esenciales y vitamina E."
+      },
+      "polvo": {
+        "name": "Polvo de Piel de Uva",
+        "desc": "Piel de uva deshidratada, fuente natural de polifenoles y fibra dietaria."
+      },
+      "ver_todos": "Ver todos los ingredientes"
+    },
+    "markets": {
+      "eyebrow": "Mercados",
+      "headline": "Ingredientes para industrias que innovan",
+      "m1": "Alimentos funcionales",
+      "m2": "Cosmética clean",
+      "m3": "Nutracéuticos",
+      "m4": "Farmacéutica"
+    },
+    "diferencial": {
+      "eyebrow": "Nuestro diferencial",
+      "headline": "Por qué Qualab",
+      "d1_title": "Origen único",
+      "d1_body": "Materia prima de viñedos de altura de Mendoza. Trazabilidad completa desde el campo.",
+      "d2_title": "Base científica",
+      "d2_body": "Evidencia validada en colaboración con UC Davis, Catena Institute y centros de investigación.",
+      "d3_title": "IA como habilitador",
+      "d3_body": "Leo, nuestra plataforma de inteligencia artificial, comprime los ciclos de I+D y conecta ciencia con mercado.",
+      "d4_title": "Co-creación real",
+      "d4_body": "Trabajamos con vos desde la hipótesis hasta el producto. Velocidad, foco y flexibilidad real."
+    },
+    "aliados": {
+      "eyebrow": "Aliados y red"
+    },
+    "cta_final": {
+      "headline": "¿Sos una marca que busca diferenciarse por salud, ciencia y origen?",
+      "body": "Trabajamos con marcas de alimentos funcionales, cosmética clean y laboratorios nutracéuticos que quieren co-crear ingredientes únicos.",
+      "cta": "Hablemos"
+    }
+  },
+  "nosotros": {
+    "hero": {
+      "eyebrow": "Quiénes somos",
+      "headline": "Una plataforma de innovación, no solo un proveedor",
+      "body": "Qualab nació del deseo de transformar una industria tradicional como la vitivinicultura en una plataforma de innovación, salud y sostenibilidad."
+    },
+    "proposito": {
+      "eyebrow": "Nuestro propósito",
+      "headline": "Transformar a la vitivinicultura en una bio-fábrica que mejore la calidad de vida de las personas y proteja al ambiente.",
+      "historia_title": "El origen de una idea",
+      "historia_body": "Fernando Buscema, fundador y CEO de Qualab, sintió la necesidad de reconectar su trabajo con su vida personal. Al volver a la rutina laboral, notó la dificultad de explicar por qué su trabajo —vinculado al vino— lo alejaba de casa. Lo que producía no podía ser compartido por quienes más amaba. De esa experiencia nació una visión: expandir el impacto del mundo vitivinícola para que pueda mejorar la vida de todas las personas, incluso de aquellas que hoy no beben vino."
+    },
+    "vision": {
+      "eyebrow": "Visión a 10 años",
+      "headline": "Upcyclear el equivalente a todo el orujo producido por Argentina y Chile anualmente.",
+      "body": "Construir el ecosistema que conecte viñedos, ciencia, tecnología y mercados globales de salud y bienestar."
+    },
+    "leo": {
+      "eyebrow": "Tecnología",
+      "headline": "Leo: nuestra IA para comprimir ciclos de I+D",
+      "body": "Leo es nuestra plataforma de inteligencia artificial en desarrollo. Procesa miles de publicaciones científicas y patentes para identificar oportunidades de valorización, conectar compuestos con efectos biológicos y guiar el desarrollo de nuevos ingredientes con evidencia robusta. En desarrollo.",
+      "tag": "En desarrollo"
+    },
+    "valores": {
+      "eyebrow": "Cómo trabajamos",
+      "headline": "Nuestros valores",
+      "v1": "Integridad",
+      "v2": "Intención",
+      "v3": "Capacidades",
+      "v4": "Resultados",
+      "v5": "Proactividad",
+      "v6": "Flexibilidad"
+    }
+  },
+  "ingredientes": {
+    "hero": {
+      "eyebrow": "Ingredientes",
+      "headline": "Activos naturales de origen vitivinícola",
+      "body": "Ingredientes bioactivos obtenidos de la biomasa de la uva, con trazabilidad completa desde viñedos de altura de Mendoza."
+    },
+    "colorante": {
+      "tag": "Destacado",
+      "name": "Colorante Natural de Uva",
+      "headline": "El rojo de la uva, estabilizado para la industria",
+      "intro": "Pigmento natural obtenido de pieles de uva tinta mendocina. Rico en antocianinas, sin sintéticos, con identidad de origen trazable.",
+      "origen_title": "Origen",
+      "origen_body": "Pieles de uva tinta de varietales tintos mendocinos (Malbec y otras variedades). Obtenido como subproducto noble de la vinificación.",
+      "compuesto_title": "Compuesto activo",
+      "compuesto_body": "Antocianinas — los pigmentos naturales responsables del color rojo-violáceo de las uvas tintas. Además de colorear, actúan como antioxidantes y exhiben propiedades bioactivas documentadas.",
+      "why_title": "¿Por qué elegir un colorante natural?",
+      "why_1": "Tendencia global clean label: los consumidores rechazan colorantes sintéticos",
+      "why_2": "Doble función: color + actividad bioactiva (antioxidante)",
+      "why_3": "Origen trazable y narrativa de sustentabilidad circular",
+      "why_4": "Alternativa a carmines y tartrazinas en formulaciones naturales",
+      "apps_title": "Aplicaciones",
+      "app_1": "Bebidas funcionales y jugos",
+      "app_2": "Yogures, lácteos y postres",
+      "app_3": "Confitería y snacks",
+      "app_4": "Suplementos en cápsula",
+      "app_5": "Cosmética color natural",
+      "spec_title": "Especificaciones técnicas",
+      "spec_format": "Polvo soluble",
+      "spec_color": "Rojo-violáceo intenso",
+      "spec_source": "Pieles de uva tinta (Vitis vinifera)",
+      "spec_origin": "Mendoza, Argentina",
+      "cta": "Solicitar muestra / ficha técnica"
+    },
+    "aceite": {
+      "name": "Aceite de Pepita de Uva",
+      "headline": "Aceite prensado en frío, rico en esenciales",
+      "intro": "Aceite virgen extraído de semillas de uva mendocina. Perfil lipídico único, alto en ácido linoleico y vitamina E natural.",
+      "origen_title": "Origen",
+      "origen_body": "Semillas (pepitas) separadas del orujo post-vinificación, prensadas en frío para preservar su perfil bioactivo.",
+      "apps_title": "Aplicaciones",
+      "app_1": "Alimentos funcionales y aderezos gourmet",
+      "app_2": "Suplementos dietarios",
+      "app_3": "Cosmética y cuidado de la piel",
+      "app_4": "Farmacéutica",
+      "spec_title": "Especificaciones",
+      "spec_format": "Aceite líquido",
+      "spec_color": "Amarillo-verdoso claro",
+      "spec_source": "Semillas de uva (Vitis vinifera)",
+      "spec_origin": "Mendoza, Argentina",
+      "cta": "Solicitar muestra / ficha técnica"
+    },
+    "polvo": {
+      "name": "Polvo de Piel de Uva",
+      "headline": "Concentrado natural de polifenoles y fibra",
+      "intro": "Piel de uva deshidratada y micronizada. Fuente natural de antocianinas, resveratrol, fibra dietaria y compuestos fenólicos.",
+      "origen_title": "Origen",
+      "origen_body": "Pieles separadas en el proceso de vinificación, deshidratadas y molidas. Proceso de bajo impacto para preservar los compuestos activos.",
+      "apps_title": "Aplicaciones",
+      "app_1": "Alimentos funcionales y panificados",
+      "app_2": "Smoothies y bebidas en polvo",
+      "app_3": "Suplementos y cápsulas",
+      "app_4": "Ingrediente en cosmética natural",
+      "spec_title": "Especificaciones",
+      "spec_format": "Polvo fino",
+      "spec_color": "Rojo-bordó",
+      "spec_source": "Pieles de uva tinta (Vitis vinifera)",
+      "spec_origin": "Mendoza, Argentina",
+      "cta": "Solicitar muestra / ficha técnica"
+    }
+  },
+  "contacto": {
+    "eyebrow": "Contacto",
+    "headline": "Hablemos",
+    "body": "Respondemos en menos de 48 horas hábiles.",
+    "form": {
+      "nombre": "Nombre y apellido",
+      "empresa": "Empresa",
+      "email": "Email",
+      "tipo_label": "¿Cómo podemos ayudarte?",
+      "tipo_1": "Soy una marca buscando ingredientes",
+      "tipo_2": "Soy un investigador / institución académica",
+      "tipo_3": "Soy un productor vitivinícola",
+      "tipo_4": "Prensa / alianzas",
+      "mensaje": "Mensaje",
+      "enviar": "Enviar mensaje",
+      "enviando": "Enviando...",
+      "success": "¡Mensaje enviado! Te contactamos pronto.",
+      "error": "Algo salió mal. Por favor escribinos a informes@qualab.co"
+    },
+    "info": {
+      "email": "informes@qualab.co",
+      "ubicacion": "Mendoza, Argentina",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "footer": {
+    "tagline": "Transformamos la biomasa vitivinícola en ingredientes que mejoran vidas.",
+    "nav_title": "Navegación",
+    "legal": "Qualab S.A.S. — Mendoza, Argentina",
+    "rights": "Todos los derechos reservados."
+  }
+}
