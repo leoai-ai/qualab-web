@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, MapPin, Leaf } from "lucide-react";
 
 interface IngredientPageProps {
@@ -16,7 +15,7 @@ interface IngredientPageProps {
   cta: string;
   contactHref: string;
   accentColor: string;
-  heroPhoto?: string;
+  heroBg?: string;
 }
 
 export default function IngredientPage({
@@ -33,43 +32,49 @@ export default function IngredientPage({
   cta,
   contactHref,
   accentColor,
-  heroPhoto,
+  heroBg,
 }: IngredientPageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-16 overflow-hidden" style={{ backgroundColor: accentColor }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
-          <div className={`flex items-center gap-12 ${heroPhoto ? "justify-between" : ""}`}>
-            <div className="max-w-2xl">
-              {tag && (
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase bg-white/20 px-3 py-1 rounded-full mb-6">
-                  {tag}
-                </span>
-              )}
-              <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-4">
-                {headline}
-              </h1>
-              <p className="text-lg text-white/80 leading-relaxed mb-8">{intro}</p>
-              <Link
-                href={contactHref}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white font-semibold text-sm hover:bg-gray-100 transition-colors"
-                style={{ color: accentColor }}
-              >
-                {cta} <ArrowRight size={14} />
-              </Link>
-            </div>
-            {heroPhoto && (
-              <div className="hidden lg:block shrink-0">
-                <Image
-                  src={heroPhoto}
-                  alt={name}
-                  width={380}
-                  height={380}
-                  className="rounded-2xl object-cover shadow-2xl"
-                />
-              </div>
+      <section className="pt-16 overflow-hidden relative" style={{ backgroundColor: accentColor }}>
+        {heroBg && (
+          <>
+            <div
+              className="absolute inset-0 opacity-60"
+              style={{
+                backgroundImage: `url(${heroBg})`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "right center",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `linear-gradient(100deg, ${accentColor}dd 0%, ${accentColor}aa 45%, ${accentColor}60 70%, transparent 100%)`,
+              }}
+            />
+          </>
+        )}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+          <div className="max-w-2xl">
+            {tag && (
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase bg-white/20 px-3 py-1 rounded-full mb-6">
+                {tag}
+              </span>
             )}
+            <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-4">
+              {headline}
+            </h1>
+            <p className="text-lg text-white/80 leading-relaxed mb-8">{intro}</p>
+            <Link
+              href={contactHref}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white font-semibold text-sm hover:bg-gray-100 transition-colors"
+              style={{ color: accentColor }}
+            >
+              {cta} <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>

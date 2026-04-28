@@ -24,7 +24,7 @@ export default function PolvoPielPage() {
       cta={t("cta")}
       contactHref={`/${locale}/contacto`}
       accentColor="#5C2D6B"
-      heroPhoto="/Polvo_uva.png"
+      heroBg="/Polvo_uva.png"
     />
   );
 }

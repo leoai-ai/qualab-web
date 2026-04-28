@@ -23,7 +23,8 @@ export default function AceitePage() {
       ]}
       cta={t("cta")}
       contactHref={`/${locale}/contacto`}
-      accentColor="#3A7D44"
+      accentColor="#4E9B5A"
+      heroBg="/Aceite_uva.png"
     />
   );
 }
