@@ -6,7 +6,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 const PHOTOS = {
   colorante: "https://images.unsplash.com/photo-1680165565648-852800b3e710?w=900&q=80&auto=format&fit=crop",
   aceite:    "https://images.unsplash.com/photo-1768689033119-c3ac1e437d20?w=900&q=80&auto=format&fit=crop",
-  polvo:     "https://images.unsplash.com/photo-1621336404131-24ae0e4755a2?w=900&q=80&auto=format&fit=crop",
+  polvo:     "/Polvo_uva.png",
 };
 
 export default function IngredientCards() {
