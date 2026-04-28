@@ -26,13 +26,10 @@ export default function ColorantePage() {
     <>
       {/* HERO */}
       <section className="pt-24 pb-0 overflow-hidden relative" style={{ background: "#200610" }}>
-        {/* Grape photo background */}
+        {/* Background photo */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1756361946520-4aaa1d855013?w=1600&q=80&auto=format&fit=crop)",
-          }}
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url(/Colorante_imagen.png)" }}
         />
         {/* Gradient overlay: dark left for text, reveals photo right */}
         <div
