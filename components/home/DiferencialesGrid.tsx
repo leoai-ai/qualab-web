@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const PHOTOS = [
-  "https://images.unsplash.com/photo-1756361946520-4aaa1d855013?w=600&q=80&auto=format&fit=crop",
+  "/mendoza-vendimia.png",
   "https://images.unsplash.com/photo-1486825586573-7131f7991bdd?w=600&q=80&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1749006590324-d6b2e90ab1c0?w=600&q=80&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1638262052640-82e94d64664a?w=600&q=80&auto=format&fit=crop",

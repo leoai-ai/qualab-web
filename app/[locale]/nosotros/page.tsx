@@ -1,13 +1,20 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Zap, ShieldCheck, Target, Wrench, TrendingUp, Lightbulb, Shuffle } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function NosotrosPage() {
   const t = useTranslations("nosotros");
   const locale = useLocale();
 
-  const valores = [t("valores.v1"), t("valores.v2"), t("valores.v3"), t("valores.v4"), t("valores.v5"), t("valores.v6")];
+  const valores = [
+    { label: t("valores.v1"), icon: ShieldCheck, color: "#1B3A6B", desc: "Actuamos con honestidad y coherencia en cada decisión." },
+    { label: t("valores.v2"), icon: Target,      color: "#3A7D44", desc: "Cada acción tiene un propósito claro y deliberado." },
+    { label: t("valores.v3"), icon: Wrench,       color: "#C9A84C", desc: "Combinamos ciencia, tecnología y conocimiento vitivinícola." },
+    { label: t("valores.v4"), icon: TrendingUp,   color: "#1B3A6B", desc: "Medimos el éxito por el impacto real que generamos." },
+    { label: t("valores.v5"), icon: Lightbulb,    color: "#3A7D44", desc: "Anticipamos oportunidades antes de que sean evidentes." },
+    { label: t("valores.v6"), icon: Shuffle,      color: "#C9A84C", desc: "Nos adaptamos rápido sin perder el foco en lo importante." },
+  ];
 
   return (
     <>
@@ -80,14 +87,29 @@ export default function NosotrosPage() {
       {/* Valores */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-12">
             <SectionHeader eyebrow={t("valores.eyebrow")} headline={t("valores.headline")} />
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {valores.map((v, i) => (
-              <div key={i} className="bg-[#F5F0E8] rounded-xl p-5 text-center">
-                <div className="text-2xl font-bold text-[#1B3A6B] mb-1">{i + 1}</div>
-                <div className="text-sm font-medium text-gray-700">{v}</div>
+              <div
+                key={i}
+                className="group flex items-start gap-5 bg-[#F5F0E8] hover:bg-[#1B3A6B] rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div
+                  className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300"
+                  style={{ backgroundColor: v.color + "18" }}
+                >
+                  <v.icon size={22} style={{ color: v.color }} className="group-hover:text-white transition-colors duration-300" />
+                </div>
+                <div>
+                  <div className="font-bold text-[#1B3A6B] group-hover:text-white mb-1 transition-colors duration-300">
+                    {v.label}
+                  </div>
+                  <p className="text-sm text-gray-500 group-hover:text-blue-200 leading-relaxed transition-colors duration-300">
+                    {v.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
