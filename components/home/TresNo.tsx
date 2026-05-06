@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
 const ACCENTS = [
-  { border: "#1B3A6B", bg: "#1B3A6B", label: "NO-MERCADO" },
+  { border: "#7B2D8B", bg: "#7B2D8B", label: "NO-MERCADO" },
   { border: "#3A7D44", bg: "#3A7D44", label: "NO-BIOMASA" },
   { border: "#C9A84C", bg: "#C9A84C", label: "NO-INNOVACIÓN" },
 ];
