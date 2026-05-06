@@ -9,7 +9,7 @@ export default function Hero() {
   const locale = useLocale();
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-[115vh] flex items-center overflow-hidden">
       {/* ── HERO BACKGROUND: Qualab cycle image ── */}
       <div
         className="absolute inset-0 bg-cover"
@@ -29,14 +29,6 @@ export default function Hero() {
         }}
       />
 
-      {/* ── BOTTOM FADE: hides bottom edge of image on large viewports ── */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(13,27,55,0.75) 0%, transparent 100%)",
-        }}
-      />
 
       {/* Gradient mesh for depth */}
       <div
