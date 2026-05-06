@@ -45,6 +45,9 @@
         "name": "Grape Skin Powder",
         "desc": "Dehydrated grape skin, a natural source of polyphenols and dietary fiber."
       },
+      "label_featured": "Star ingredient",
+      "label_standard": "Ingredient",
+      "ver_mas": "View more",
       "ver_todos": "View all ingredients"
     },
     "markets": {

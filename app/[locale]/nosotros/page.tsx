@@ -1,7 +1,31 @@
+import type { Metadata } from "next";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { ArrowRight, Zap, ShieldCheck, Target, Wrench, TrendingUp, Lightbulb, Shuffle } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isES = locale === "es";
+  return {
+    title: isES ? "Nosotros" : "About us",
+    description: isES
+      ? "Qualab nació para transformar la vitivinicultura en una plataforma de innovación. Conocé nuestro propósito, visión y el equipo detrás de la idea."
+      : "Qualab was born to transform viticulture into an innovation platform. Learn about our purpose, vision and the team behind the idea.",
+    openGraph: {
+      title: isES ? "Nosotros | Qualab" : "About us | Qualab",
+      description: isES
+        ? "Una plataforma de innovación que conecta viñedos, ciencia y mercados globales de salud."
+        : "An innovation platform connecting vineyards, science and global health markets.",
+      siteName: "Qualab",
+      type: "website",
+    },
+  };
+}
 
 export default function NosotrosPage() {
   const t = useTranslations("nosotros");

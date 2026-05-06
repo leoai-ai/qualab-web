@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const PHOTOS = {
-  colorante: "https://images.unsplash.com/photo-1680165565648-852800b3e710?w=900&q=80&auto=format&fit=crop",
+  colorante: "/Colorante_imagen.png",
   aceite:    "https://images.unsplash.com/photo-1768689033119-c3ac1e437d20?w=900&q=80&auto=format&fit=crop",
   polvo:     "/Polvo_uva.png",
 };
@@ -25,7 +25,7 @@ export default function IngredientCards() {
       overlayFrom: "#3D0B1A",
       overlayVia: "#6B1535",
       accent: "#F4B8C8",
-      label: "Ingrediente estrella",
+      label: t("label_featured"),
     },
     {
       key: "aceite",
@@ -37,7 +37,7 @@ export default function IngredientCards() {
       overlayFrom: "#1A2E0A",
       overlayVia: "#2D5A1A",
       accent: "#bbf7d0",
-      label: "Ingrediente",
+      label: t("label_standard"),
     },
     {
       key: "polvo",
@@ -49,7 +49,7 @@ export default function IngredientCards() {
       overlayFrom: "#1E0B2E",
       overlayVia: "#3B1A5A",
       accent: "#e9d5ff",
-      label: "Ingrediente",
+      label: t("label_standard"),
     },
   ];
 
@@ -125,7 +125,7 @@ export default function IngredientCards() {
                   {ing.desc}
                 </p>
                 <div className="inline-flex items-center gap-2 text-xs font-semibold text-white/70 group-hover:text-white group-hover:gap-3 transition-all duration-300">
-                  Ver más <ArrowRight size={14} />
+                  {t("ver_mas")} <ArrowRight size={14} />
                 </div>
               </div>
             </Link>

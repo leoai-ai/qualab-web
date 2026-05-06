@@ -45,6 +45,9 @@
         "name": "Polvo de Piel de Uva",
         "desc": "Piel de uva deshidratada, fuente natural de polifenoles y fibra dietaria."
       },
+      "label_featured": "Ingrediente estrella",
+      "label_standard": "Ingrediente",
+      "ver_mas": "Ver más",
       "ver_todos": "Ver todos los ingredientes"
     },
     "markets": {

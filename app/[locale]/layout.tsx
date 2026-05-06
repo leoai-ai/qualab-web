@@ -16,10 +16,17 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: {
     template: "%s | Qualab",
-    default: "Qualab — Ingredientes bioactivos de origen vitivinícola",
+    default: "Qualab — Colorantes naturales e ingredientes de uva",
   },
   description:
-    "Transformamos la biomasa vitivinícola en ingredientes bioactivos para alimentos funcionales, cosmética y nutracéuticos. Origen Mendoza, ciencia validada.",
+    "Qualab transforma subproductos de la vid en colorantes naturales e ingredientes funcionales para alimentos, bebidas y nutracéuticos. Origen Mendoza, Argentina.",
+  openGraph: {
+    siteName: "Qualab",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 type Props = {

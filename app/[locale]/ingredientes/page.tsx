@@ -1,7 +1,31 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isES = locale === "es";
+  return {
+    title: isES ? "Ingredientes" : "Ingredients",
+    description: isES
+      ? "Colorante natural de uva, aceite de pepita y polvo de piel. Ingredientes bioactivos de origen vitivinícola con trazabilidad completa desde Mendoza, Argentina."
+      : "Natural grape colorant, seed oil and skin powder. Bioactive ingredients of viticultural origin with full traceability from Mendoza, Argentina.",
+    openGraph: {
+      title: isES ? "Ingredientes | Qualab" : "Ingredients | Qualab",
+      description: isES
+        ? "Activos naturales obtenidos de la biomasa de la uva para alimentos funcionales, cosmética y nutraceúticos."
+        : "Natural actives from grape biomass for functional foods, cosmetics and nutraceuticals.",
+      siteName: "Qualab",
+      type: "website",
+    },
+  };
+}
 
 export default function IngredientesPage() {
   const t = useTranslations("ingredientes");

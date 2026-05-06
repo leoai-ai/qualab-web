@@ -1,5 +1,29 @@
+import type { Metadata } from "next";
 import { useTranslations, useLocale } from "next-intl";
 import IngredientPage from "@/components/ingredientes/IngredientPage";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isES = locale === "es";
+  return {
+    title: isES ? "Aceite de Pepita de Uva" : "Grape Seed Oil",
+    description: isES
+      ? "Aceite virgen de pepita de uva mendocina, prensado en frío. Alto contenido de ácido linoleico y vitamina E natural. Para alimentos funcionales, cosmética y farmacéutica."
+      : "Virgin cold-pressed Mendoza grape seed oil. High linoleic acid content and natural vitamin E. For functional foods, cosmetics and pharmaceuticals.",
+    openGraph: {
+      title: isES ? "Aceite de Pepita de Uva | Qualab" : "Grape Seed Oil | Qualab",
+      description: isES
+        ? "Perfil lipídico único, alto en ácido linoleico y vitamina E natural. Origen Mendoza, Argentina."
+        : "Unique lipid profile, high in linoleic acid and natural vitamin E. Origin Mendoza, Argentina.",
+      siteName: "Qualab",
+      type: "website",
+    },
+  };
+}
 
 export default function AceitePage() {
   const t = useTranslations("ingredientes.aceite");
