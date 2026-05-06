@@ -12,8 +12,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* ── HERO BACKGROUND: Qualab cycle image ── */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${HERO_CYCLE})` }}
+        className="absolute inset-0 bg-cover"
+        style={{
+          backgroundImage: `url(${HERO_CYCLE})`,
+          backgroundPosition: "center 30%",
+        }}
       />
 
       {/* ── BRAND OVERLAY ── */}
@@ -23,6 +26,15 @@ export default function Hero() {
         style={{
           background:
             "linear-gradient(100deg, rgba(13,27,55,0.78) 0%, rgba(13,27,55,0.65) 40%, rgba(13,27,55,0.45) 65%, rgba(13,27,55,0.30) 100%)",
+        }}
+      />
+
+      {/* ── BOTTOM FADE: hides bottom edge of image on large viewports ── */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(13,27,55,0.75) 0%, transparent 100%)",
         }}
       />
 
