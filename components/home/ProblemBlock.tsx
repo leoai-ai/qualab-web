@@ -1,8 +1,50 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import SectionHeader from "@/components/shared/SectionHeader";
 
+const R = 88;
+const CX = 110;
+const CY = 110;
+const CIRC = 2 * Math.PI * R; // ≈ 552.9
+
 export default function ProblemBlock() {
   const t = useTranslations("home.problem");
+  const [animated, setAnimated] = useState(false);
+  const [count, setCount] = useState(0);
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  // Trigger when the chart enters the viewport
+  useEffect(() => {
+    const el = chartRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setAnimated(true); },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Animated counter 0 → 75
+  useEffect(() => {
+    if (!animated) return;
+    let start: number | null = null;
+    const duration = 1400;
+    const tick = (ts: number) => {
+      if (start === null) start = ts;
+      const p = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+      setCount(Math.round(eased * 75));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [animated]);
+
+  // strokeDashoffset formula: CIRC * (1 - pct)
+  // With dasharray="CIRC CIRC": offset=CIRC → 0% visible, offset=CIRC*0.25 → 75% visible
+  const greenOffset = animated ? CIRC * 0.25 : CIRC;
 
   return (
     <section className="pt-8 pb-24 bg-white relative overflow-hidden">
@@ -20,34 +62,73 @@ export default function ProblemBlock() {
             body={t("body")}
           />
 
-          {/* Visual: donut chart */}
-          <div className="flex flex-col items-center lg:items-center gap-8">
+          <div ref={chartRef} className="flex flex-col items-center lg:items-center gap-8">
+
+            {/* Animated donut chart */}
             <div className="relative w-52 h-52 shrink-0">
-              {/* Outer glow */}
+
+              {/* Outer glow — fades in with the arc */}
               <div
-                className="absolute inset-[-8px] rounded-full opacity-20"
+                className="absolute inset-[-8px] rounded-full pointer-events-none"
                 style={{
-                  background:
-                    "conic-gradient(#3A7D44 0deg 270deg, #1B3A6B 270deg 360deg)",
-                  filter: "blur(12px)",
+                  background: "conic-gradient(#3A7D44 0deg 270deg, transparent 270deg 360deg)",
+                  filter: "blur(14px)",
+                  opacity: animated ? 0.15 : 0,
+                  transition: animated ? "opacity 0.8s ease 0.8s" : "none",
                 }}
               />
-              {/* Donut ring */}
-              <div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background:
-                    "conic-gradient(#3A7D44 0deg 270deg, #1B3A6B 270deg 360deg)",
-                }}
-              />
-              {/* Inner hole */}
-              <div className="absolute inset-[18%] rounded-full bg-white flex flex-col items-center justify-center shadow-sm">
-                <div className="text-2xl font-bold text-[#3A7D44] leading-none">
-                  75%
-                </div>
-                <div className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">
+
+              <svg viewBox="0 0 220 220" className="absolute inset-0 w-full h-full">
+                {/* Background track */}
+                <circle
+                  cx={CX} cy={CY} r={R}
+                  fill="none"
+                  stroke="#f1f5f9"
+                  strokeWidth="22"
+                />
+
+                {/* Green 75% arc — draws on scroll */}
+                <circle
+                  cx={CX} cy={CY} r={R}
+                  fill="none"
+                  stroke="#3A7D44"
+                  strokeWidth="22"
+                  strokeLinecap="butt"
+                  strokeDasharray={`${CIRC} ${CIRC}`}
+                  strokeDashoffset={greenOffset}
+                  transform={`rotate(-90 ${CX} ${CY})`}
+                  style={{
+                    transition: animated
+                      ? "stroke-dashoffset 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                      : "none",
+                  }}
+                />
+
+                {/* Blue 25% arc — fades in after green finishes */}
+                <circle
+                  cx={CX} cy={CY} r={R}
+                  fill="none"
+                  stroke="#1B3A6B"
+                  strokeWidth="22"
+                  strokeLinecap="butt"
+                  strokeDasharray={`${CIRC * 0.25} ${CIRC * 0.75}`}
+                  strokeDashoffset={-(CIRC * 0.75)}
+                  transform={`rotate(-90 ${CX} ${CY})`}
+                  style={{
+                    opacity: animated ? 1 : 0,
+                    transition: animated ? "opacity 0.5s ease 1.1s" : "none",
+                  }}
+                />
+              </svg>
+
+              {/* Center label */}
+              <div className="absolute inset-[20%] rounded-full bg-white shadow-sm flex flex-col items-center justify-center">
+                <span className="text-2xl font-bold text-[#3A7D44] leading-none tabular-nums">
+                  {count}%
+                </span>
+                <span className="text-[10px] text-gray-400 uppercase tracking-wider mt-1">
                   biomasa
-                </div>
+                </span>
               </div>
             </div>
 
