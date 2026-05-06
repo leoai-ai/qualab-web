@@ -11,10 +11,10 @@
   "home": {
     "hero": {
       "eyebrow": "Plataforma de valorización vitivinícola",
-      "headline": "De la uva a la salud: valorización total de la biomasa",
-      "subheadline": "Transformamos lo que la industria del vino descarta en ingredientes bioactivos que mejoran vidas. Origen Mendoza. Ciencia validada. Co-creación real.",
+      "headline": "Colorantes naturales e ingredientes funcionales a partir de biomasa vitivinícola",
+      "subheadline": "Transformamos subproductos de la vid en soluciones de origen natural para alimentos, bebidas y nuevas aplicaciones industriales.",
       "cta_primary": "Conocé la plataforma",
-      "cta_secondary": "Hablemos"
+      "cta_secondary": "Conversemos"
     },
     "stats": {
       "label1": "Industria global del vino",
@@ -77,26 +77,26 @@
       "b2_body": "Transformamos subproductos de la vid —pieles, semillas, sarmientos— en ingredientes funcionales de alta concentración y trazabilidad comprobable.",
       "b3_title": "Necesidades del mercado",
       "b3_body": "Conectamos la ciencia con aplicaciones industriales concretas. Cada ingrediente que desarrollamos responde a una demanda real de la industria alimentaria, cosmética o nutracéutica.",
-      "cierre": "Identificamos oportunidades en la biomasa de la vid y las transformamos en ingredientes funcionales de origen natural, con aplicaciones concretas en distintas industrias."
+      "cierre": "Hoy, uno de los caminos más avanzados de este enfoque es el desarrollo y comercialización de colorantes naturales a partir de uva."
     },
     "tres_no": {
       "eyebrow": "Enfoque",
       "headline": "Nuevas fronteras de valor en la vitivinicultura",
       "n1_title": "Gran parte del mundo no consume vino",
-      "n1_body": "Una proporción significativa de la población global no toma alcohol. Eso abre una oportunidad enorme para pensar el valor de la vid más allá del vino tradicional.",
+      "n1_body": "Una parte significativa de la población mundial no consume alcohol. Eso abre la posibilidad de pensar la vid más allá de su uso tradicional.",
       "n2_title": "La mayoría de la biomasa no se valoriza",
-      "n2_body": "Entre el 70% y el 80% de la biomasa generada en la vinificación no se convierte en productos de alto valor. Ese espacio es donde Qualab opera.",
+      "n2_body": "Una proporción relevante de la biomasa de la vid no se valoriza. Ahí existe un espacio concreto para generar nuevos ingredientes y aplicaciones.",
       "n3_title": "El conocimiento científico no siempre llega al mercado",
-      "n3_body": "Existe evidencia científica valiosa sobre los compuestos de la uva que no se traduce en productos reales. Cerrar esa brecha es parte central de lo que hacemos.",
+      "n3_body": "Mucho del conocimiento científico generado no llega a convertirse en productos. Cerrar esa brecha es clave para que la innovación tenga impacto real.",
       "cierre": "Cuando estas tres fronteras empiezan a conectarse, aparece una nueva forma de entender el potencial de la vitivinicultura."
     },
     "aliados": {
       "eyebrow": "Aliados y red"
     },
     "cta_final": {
-      "headline": "¿Sos una marca que busca diferenciarse por salud, ciencia y origen?",
-      "body": "Trabajamos con marcas de alimentos funcionales, cosmética clean y laboratorios nutracéuticos que quieren co-crear ingredientes únicos.",
-      "cta": "Hablemos"
+      "headline": "¿Estás explorando ingredientes naturales para nuevas aplicaciones?",
+      "body": "En Qualab trabajamos con empresas y partners interesados en desarrollar soluciones de origen vitivinícola con respaldo científico y aplicación industrial.",
+      "cta": "Conversemos"
     }
   },
   "nosotros": {
@@ -142,8 +142,8 @@
     "colorante": {
       "tag": "Destacado",
       "name": "Colorante Natural de Uva",
-      "headline": "El rojo de la uva, estabilizado para la industria",
-      "intro": "Pigmento natural obtenido de pieles de uva tinta mendocina. Rico en antocianinas, sin sintéticos, con identidad de origen trazable.",
+      "headline": "Colorantes naturales de uva para alimentos y bebidas",
+      "intro": "Qualab desarrolla y acerca al mercado colorantes naturales a partir de uva, pensados para aplicaciones en alimentos, bebidas y nutracéutica. Estos colorantes se basan en extractos vegetales ricos en antocianinas, compuestos naturalmente presentes en la uva y responsables de tonalidades rojas y púrpuras.",
       "origen_title": "Origen",
       "origen_body": "Pieles de uva tinta de varietales tintos mendocinos (Malbec y otras variedades). Obtenido como subproducto noble de la vinificación.",
       "compuesto_title": "Compuesto activo",
@@ -164,7 +164,7 @@
       "spec_color": "Rojo-violáceo intenso",
       "spec_source": "Pieles de uva tinta (Vitis vinifera)",
       "spec_origin": "Mendoza, Argentina",
-      "cta": "Solicitar muestra / ficha técnica"
+      "cta": "Conversemos sobre una aplicación específica"
     },
     "aceite": {
       "name": "Aceite de Pepita de Uva",
@@ -205,17 +205,19 @@
   },
   "contacto": {
     "eyebrow": "Contacto",
-    "headline": "Hablemos",
-    "body": "Respondemos en menos de 48 horas hábiles.",
+    "headline": "Conversemos",
+    "body": "Si estás explorando ingredientes naturales, aplicaciones industriales o nuevas formas de valorizar biomasa vitivinícola, podemos conversar. Qualab trabaja con empresas, partners e instituciones interesadas en desarrollar soluciones de origen vitivinícola con respaldo científico y aplicación real.",
     "form": {
-      "nombre": "Nombre y apellido",
-      "empresa": "Empresa",
+      "nombre": "Nombre",
+      "empresa": "Empresa / institución",
       "email": "Email",
-      "tipo_label": "¿Cómo podemos ayudarte?",
-      "tipo_1": "Soy una marca buscando ingredientes",
-      "tipo_2": "Soy un investigador / institución académica",
-      "tipo_3": "Soy un productor vitivinícola",
-      "tipo_4": "Prensa / alianzas",
+      "tipo_label": "Motivo de contacto",
+      "tipo_1": "Colorantes naturales",
+      "tipo_2": "Ingredientes funcionales",
+      "tipo_3": "Desarrollo conjunto",
+      "tipo_4": "Investigación / colaboración",
+      "tipo_5": "Prensa / institucional",
+      "tipo_6": "Otro",
       "mensaje": "Mensaje",
       "enviar": "Enviar mensaje",
       "enviando": "Enviando...",

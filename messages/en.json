@@ -11,8 +11,8 @@
   "home": {
     "hero": {
       "eyebrow": "Viticultural biomass valorization platform",
-      "headline": "From grape to health: total biomass valorization",
-      "subheadline": "We transform what the wine industry discards into bioactive ingredients that improve lives. Mendoza origin. Validated science. Real co-creation.",
+      "headline": "Natural colorants and functional ingredients from viticultural biomass",
+      "subheadline": "We transform vine by-products into natural-origin solutions for food, beverages and new industrial applications.",
       "cta_primary": "Explore the platform",
       "cta_secondary": "Let's talk"
     },
@@ -77,25 +77,25 @@
       "b2_body": "We transform vine by-products —skins, seeds, canes— into high-concentration functional ingredients with verifiable traceability.",
       "b3_title": "Market needs",
       "b3_body": "We connect science with concrete industrial applications. Every ingredient we develop responds to a real demand from the food, cosmetics or nutraceutical industry.",
-      "cierre": "We identify opportunities in vine biomass and transform them into natural-origin functional ingredients, with concrete applications across industries."
+      "cierre": "Today, one of the most advanced paths of this approach is the development and commercialization of natural colorants from grape."
     },
     "tres_no": {
       "eyebrow": "Approach",
       "headline": "New value frontiers in viticulture",
       "n1_title": "A large part of the world doesn't drink wine",
-      "n1_body": "A significant proportion of the global population doesn't consume alcohol. That opens a huge opportunity to think about vine value beyond traditional wine.",
+      "n1_body": "A significant proportion of the global population doesn't consume alcohol. That opens a huge opportunity to think about the vine beyond its traditional use.",
       "n2_title": "Most biomass isn't valorized",
-      "n2_body": "Between 70% and 80% of the biomass generated in winemaking isn't converted into high-value products. That space is where Qualab operates.",
+      "n2_body": "A relevant proportion of vine biomass is not valorized. There is a concrete space there to generate new ingredients and applications.",
       "n3_title": "Scientific knowledge doesn't always reach the market",
-      "n3_body": "Valuable scientific evidence about grape compounds doesn't translate into real products. Closing that gap is a core part of what we do.",
+      "n3_body": "Much of the scientific knowledge generated never becomes products. Closing that gap is key for innovation to have real impact.",
       "cierre": "When these three frontiers start to connect, a new way of understanding viticulture's potential emerges."
     },
     "aliados": {
       "eyebrow": "Partners & network"
     },
     "cta_final": {
-      "headline": "Are you a brand looking to differentiate through health, science and origin?",
-      "body": "We work with functional food brands, clean beauty companies and nutraceutical laboratories that want to co-create unique ingredients.",
+      "headline": "Are you exploring natural ingredients for new applications?",
+      "body": "At Qualab we work with companies and partners interested in developing solutions of viticultural origin with scientific backing and industrial application.",
       "cta": "Let's talk"
     }
   },
@@ -142,8 +142,8 @@
     "colorante": {
       "tag": "Featured",
       "name": "Natural Grape Colorant",
-      "headline": "The red of the grape, stabilized for industry",
-      "intro": "Natural pigment obtained from red grape skins from Mendoza. Rich in anthocyanins, synthetic-free, with traceable origin identity.",
+      "headline": "Natural grape colorants for food and beverages",
+      "intro": "Qualab develops and brings to market natural colorants from grape, designed for applications in food, beverages and nutraceuticals. These colorants are based on plant extracts rich in anthocyanins, compounds naturally present in grapes and responsible for red and purple hues.",
       "origen_title": "Origin",
       "origen_body": "Red grape skins from Mendoza varietals (Malbec and other red varieties). Obtained as a noble by-product of the winemaking process.",
       "compuesto_title": "Active compound",
@@ -164,7 +164,7 @@
       "spec_color": "Intense red-violet",
       "spec_source": "Red grape skins (Vitis vinifera)",
       "spec_origin": "Mendoza, Argentina",
-      "cta": "Request sample / technical sheet"
+      "cta": "Let's talk about a specific application"
     },
     "aceite": {
       "name": "Grape Seed Oil",
@@ -206,16 +206,18 @@
   "contacto": {
     "eyebrow": "Contact",
     "headline": "Let's talk",
-    "body": "We respond within 48 business hours.",
+    "body": "If you are exploring natural ingredients, industrial applications or new ways to valorize viticultural biomass, we can talk. Qualab works with companies, partners and institutions interested in developing solutions of viticultural origin with scientific backing and real application.",
     "form": {
       "nombre": "Full name",
-      "empresa": "Company",
+      "empresa": "Company / institution",
       "email": "Email",
-      "tipo_label": "How can we help you?",
-      "tipo_1": "I'm a brand looking for ingredients",
-      "tipo_2": "I'm a researcher / academic institution",
-      "tipo_3": "I'm a wine producer",
-      "tipo_4": "Press / partnerships",
+      "tipo_label": "Reason for contact",
+      "tipo_1": "Natural colorants",
+      "tipo_2": "Functional ingredients",
+      "tipo_3": "Joint development",
+      "tipo_4": "Research / collaboration",
+      "tipo_5": "Press / institutional",
+      "tipo_6": "Other",
       "mensaje": "Message",
       "enviar": "Send message",
       "enviando": "Sending...",

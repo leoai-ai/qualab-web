@@ -17,7 +17,7 @@ export default function ContactoPage() {
     mensaje: "",
   });
 
-  const tipoOptions = [f("tipo_1"), f("tipo_2"), f("tipo_3"), f("tipo_4")];
+  const tipoOptions = [f("tipo_1"), f("tipo_2"), f("tipo_3"), f("tipo_4"), f("tipo_5"), f("tipo_6")];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
