@@ -1,5 +1,6 @@
-import { useTranslations } from "next-intl";
-import { FlaskConical, Factory, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { FlaskConical, Factory, TrendingUp, ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const ICONS = [FlaskConical, Factory, TrendingUp];
@@ -7,6 +8,7 @@ const ACCENTS = ["#1B3A6B", "#3A7D44", "#C9A84C"];
 
 export default function QueHacemos() {
   const t = useTranslations("home.que_hacemos");
+  const locale = useLocale();
 
   const bloques = [
     { icon: ICONS[0], color: ACCENTS[0], title: t("b1_title"), body: t("b1_body") },
@@ -59,10 +61,28 @@ export default function QueHacemos() {
           ))}
         </div>
 
-        {/* Closing paragraph */}
-        <p className="mt-12 text-center text-gray-500 text-sm leading-relaxed max-w-3xl mx-auto italic">
-          {t("cierre")}
-        </p>
+        {/* Featured callout — colorante highlight */}
+        <div className="mt-12 rounded-2xl bg-[#1B3A6B] overflow-hidden">
+          <div className="flex flex-col sm:flex-row items-center gap-6 px-8 py-7">
+            {/* Grape dot accent */}
+            <div className="shrink-0 w-14 h-14 rounded-full bg-[#C9A84C]/20 border border-[#C9A84C]/40 flex items-center justify-center text-2xl select-none">
+              🍇
+            </div>
+
+            {/* Text */}
+            <p className="text-white/90 text-base sm:text-lg font-medium leading-snug text-center sm:text-left flex-1">
+              {t("cierre")}
+            </p>
+
+            {/* CTA link */}
+            <Link
+              href={`/${locale}/ingredientes/colorante-natural`}
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#C9A84C] text-white text-sm font-semibold hover:bg-amber-500 transition-colors whitespace-nowrap"
+            >
+              Ver colorante <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
