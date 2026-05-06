@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function CtaFinal() {
   const t = useTranslations("home.cta_final");
@@ -42,9 +42,20 @@ export default function CtaFinal() {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
           {t("headline")}
         </h2>
-        <p className="text-blue-200/80 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        <p className="text-blue-200/80 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
           {t("body")}
         </p>
+
+        {/* Bullet points */}
+        <ul className="flex flex-col gap-3 mb-10 max-w-md mx-auto text-left">
+          {[t("bullet_1"), t("bullet_2")].map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <CheckCircle2 size={18} className="text-[#C9A84C] shrink-0 mt-0.5" />
+              <span className="text-blue-100/80 text-sm leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+
         <Link
           href={`/${locale}/contacto`}
           className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C9A84C] text-white font-semibold text-base hover:bg-amber-500 transition-colors"

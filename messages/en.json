@@ -97,8 +97,10 @@
       "eyebrow": "Partners & network"
     },
     "cta_final": {
-      "headline": "Are you exploring natural ingredients for new applications?",
-      "body": "At Qualab we work with companies and partners interested in developing solutions of viticultural origin with scientific backing and industrial application.",
+      "headline": "Want to evaluate a specific application?",
+      "body": "Let's talk about the use of natural grape colorants in your product.",
+      "bullet_1": "Applications in food, beverages, nutraceuticals and new formulations.",
+      "bullet_2": "Technical backing to evaluate incorporation in real products.",
       "cta": "Let's talk"
     }
   },
