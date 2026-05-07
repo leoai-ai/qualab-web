@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import MarqueeBanner from "@/components/home/MarqueeBanner";
 import Hero from "@/components/home/Hero";
 import StatsStrip from "@/components/home/StatsStrip";
 import ProblemBlock from "@/components/home/ProblemBlock";
@@ -39,6 +40,7 @@ export async function generateMetadata({
 export default function HomePage() {
   return (
     <>
+      <MarqueeBanner />
       <Hero />
       <StatsStrip />
       <ProblemBlock />
