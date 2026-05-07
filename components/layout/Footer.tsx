@@ -58,16 +58,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>Mendoza, Argentina</li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/qualab"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
             </ul>
           </div>
         </div>
