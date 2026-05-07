@@ -273,9 +273,6 @@ export default function ColorantePage() {
 
               {/* Certification badges */}
               <div className="mt-7 pt-6 border-t border-white/10">
-                <p className="text-[10px] font-semibold text-blue-300/70 tracking-widest uppercase mb-4">
-                  Certificaciones
-                </p>
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { Icon: WheatOff,   label: "Gluten Free",   color: "#4ade80" },
