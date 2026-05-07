@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: "Qualab Web <onboarding@resend.dev>",
-      to: "informes@qualab.co",
+      to: "roque.tenerini@qualab.co",
       replyTo: email,
       subject: `Nueva consulta: ${tipo || "Contacto"} — ${nombre}`,
       html: `
