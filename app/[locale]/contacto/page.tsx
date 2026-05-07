@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Mail, MapPin, ExternalLink, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 
 export default function ContactoPage() {
   const t = useTranslations("contacto");
@@ -182,22 +182,6 @@ export default function ContactoPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#1B3A6B]/10 flex items-center justify-center shrink-0">
-                  <ExternalLink size={18} className="text-[#1B3A6B]" />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">LinkedIn</div>
-                  <a
-                    href="https://www.linkedin.com/company/qualab"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-[#1B3A6B] hover:underline"
-                  >
-                    /company/qualab
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
