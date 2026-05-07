@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-import { CheckCircle, ArrowRight, Leaf, FlaskConical, MapPin } from "lucide-react";
+import { CheckCircle, ArrowRight, Leaf, FlaskConical, MapPin, WheatOff, Sprout, ShieldCheck } from "lucide-react";
 
 const swatches = [
   { color: "#3D0B1A", label: "Cabernet" },
@@ -260,7 +260,6 @@ export default function ColorantePage() {
                   { key: "Formato", val: t("spec_format") },
                   { key: "Color", val: t("spec_color") },
                   { key: "Fuente", val: t("spec_source") },
-                  { key: "Origen", val: t("spec_origin") },
                 ].map(({ key, val }) => (
                   <div
                     key={key}
@@ -271,6 +270,35 @@ export default function ColorantePage() {
                   </div>
                 ))}
               </dl>
+
+              {/* Certification badges */}
+              <div className="mt-7 pt-6 border-t border-white/10">
+                <p className="text-[10px] font-semibold text-blue-300/70 tracking-widest uppercase mb-4">
+                  Certificaciones
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { Icon: WheatOff,   label: "Gluten Free",   color: "#4ade80" },
+                    { Icon: Sprout,     label: "Non-GMO",       color: "#86efac" },
+                    { Icon: Leaf,       label: "Natural",       color: "#C9A84C" },
+                    { Icon: ShieldCheck,label: "BSE-TSE Free",  color: "#93c5fd" },
+                  ].map(({ Icon, label, color }) => (
+                    <div
+                      key={label}
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5"
+                      style={{
+                        background: "rgba(255,255,255,0.07)",
+                        border: "1px solid rgba(255,255,255,0.12)",
+                      }}
+                    >
+                      <Icon size={15} style={{ color, flexShrink: 0 }} />
+                      <span className="text-xs font-semibold text-white/90 leading-tight">
+                        {label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
