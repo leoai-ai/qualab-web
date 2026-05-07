@@ -31,9 +31,9 @@ export default function CtaFinal() {
           <span className="w-6 h-px bg-[#C9A84C]" />
           <span
             className="text-sm font-bold tracking-[0.22em] uppercase"
-            style={{ color: "#1B3A6B", letterSpacing: "0.22em" }}
+            style={{ color: "#C9A84C", letterSpacing: "0.22em" }}
           >
-            <span style={{ color: "#1B3A6B" }}>QUAL</span><span style={{ color: "#C9A84C" }}>AB</span>
+            QUALAB
           </span>
           <span className="w-6 h-px bg-[#C9A84C]" />
         </p>
