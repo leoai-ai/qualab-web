@@ -10,7 +10,7 @@ export default function StatsStrip() {
   ];
 
   return (
-    <section className="relative bg-[#1B3A6B] py-16 overflow-hidden">
+    <section className="relative bg-[#5A102D] py-8 overflow-hidden">
       {/* Dot grid texture */}
       <div
         className="absolute inset-0 opacity-[0.07]"
@@ -23,7 +23,7 @@ export default function StatsStrip() {
       {/* Decorative large circle */}
       <div
         className="absolute right-[-120px] top-1/2 -translate-y-1/2 w-80 h-80 rounded-full opacity-10"
-        style={{ background: "radial-gradient(circle, #C9A84C, transparent)" }}
+        style={{ background: "radial-gradient(circle, #C38335, transparent)" }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ export default function StatsStrip() {
               <div className="text-5xl sm:text-6xl font-bold text-white mb-3 tracking-tight">
                 {stat.value}
               </div>
-              <div className="text-sm text-blue-300 leading-relaxed max-w-52 mx-auto">
+              <div className="text-sm leading-relaxed max-w-52 mx-auto" style={{ color: "rgba(245,241,234,0.70)" }}>
                 {stat.label}
               </div>
             </div>

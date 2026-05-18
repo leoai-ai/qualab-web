@@ -45,9 +45,9 @@ export default function ContactoPage() {
 
   return (
     <>
-      <section className="pt-16 bg-[#1B3A6B] text-white">
+      <section className="pt-16 bg-[#5A102D] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#C9A84C] mb-3">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#C38335] mb-3">
             {t("eyebrow")}
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">{t("headline")}</h1>
@@ -78,7 +78,7 @@ export default function ContactoPage() {
                         required
                         value={form.nombre}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/20 focus:border-[#1B3A6B]"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5A102D]/20 focus:border-[#5A102D]"
                       />
                     </div>
                     <div>
@@ -90,7 +90,7 @@ export default function ContactoPage() {
                         name="empresa"
                         value={form.empresa}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/20 focus:border-[#1B3A6B]"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5A102D]/20 focus:border-[#5A102D]"
                       />
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export default function ContactoPage() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/20 focus:border-[#1B3A6B]"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5A102D]/20 focus:border-[#5A102D]"
                     />
                   </div>
 
@@ -118,7 +118,7 @@ export default function ContactoPage() {
                       required
                       value={form.tipo}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/20 focus:border-[#1B3A6B] bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5A102D]/20 focus:border-[#5A102D] bg-white"
                     >
                       <option value="" disabled>—</option>
                       {tipoOptions.map((opt, i) => (
@@ -136,7 +136,7 @@ export default function ContactoPage() {
                       rows={5}
                       value={form.mensaje}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A6B]/20 focus:border-[#1B3A6B] resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#5A102D]/20 focus:border-[#5A102D] resize-none"
                     />
                   </div>
 
@@ -147,7 +147,7 @@ export default function ContactoPage() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#1B3A6B] text-white font-semibold hover:bg-blue-900 disabled:opacity-60 transition-colors"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#5A102D] text-white font-semibold hover:bg-[#2B0920] disabled:opacity-60 transition-colors"
                   >
                     <Send size={16} />
                     {status === "sending" ? f("enviando") : f("enviar")}
@@ -159,20 +159,20 @@ export default function ContactoPage() {
             {/* Info */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#1B3A6B]/10 flex items-center justify-center shrink-0">
-                  <Mail size={18} className="text-[#1B3A6B]" />
+                <div className="w-10 h-10 rounded-xl bg-[#5A102D]/10 flex items-center justify-center shrink-0">
+                  <Mail size={18} className="text-[#282625]" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Email</div>
-                  <a href="mailto:informes@qualab.co" className="text-sm text-[#1B3A6B] hover:underline">
+                  <a href="mailto:informes@qualab.co" className="text-sm text-[#282625] hover:underline">
                     informes@qualab.co
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#1B3A6B]/10 flex items-center justify-center shrink-0">
-                  <MapPin size={18} className="text-[#1B3A6B]" />
+                <div className="w-10 h-10 rounded-xl bg-[#5A102D]/10 flex items-center justify-center shrink-0">
+                  <MapPin size={18} className="text-[#282625]" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">

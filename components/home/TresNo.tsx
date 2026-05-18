@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
 
 const ACCENTS = [
-  { border: "#7B2D8B", bg: "#7B2D8B", label: "NO-MERCADO" },
-  { border: "#3A7D44", bg: "#3A7D44", label: "NO-BIOMASA" },
-  { border: "#C9A84C", bg: "#C9A84C", label: "NO-INNOVACIÓN" },
+  { border: "#5A102D", bg: "#5A102D", label: "NUEVOS MERCADOS" },
+  { border: "#596943", bg: "#596943", label: "BIOMASA CON VALOR" },
+  { border: "#C38335", bg: "#C38335", label: "CIENCIA APLICADA" },
 ];
 
 export default function TresNo() {
@@ -16,14 +16,14 @@ export default function TresNo() {
   ];
 
   return (
-    <section className="py-24 bg-[#0F2347] relative overflow-hidden">
-      {/* Gradient mesh */}
+    <section className="py-24 bg-[#282625] relative overflow-hidden">
+      {/* Gradient mesh — tonos cálidos de la paleta */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse 50% 60% at 15% 50%, rgba(58,125,68,0.18) 0%, transparent 55%),
-            radial-gradient(ellipse 40% 50% at 85% 30%, rgba(201,168,76,0.12) 0%, transparent 50%)
+            radial-gradient(ellipse 50% 60% at 15% 50%, rgba(90,16,45,0.30) 0%, transparent 55%),
+            radial-gradient(ellipse 40% 50% at 85% 30%, rgba(195,131,53,0.12) 0%, transparent 50%)
           `,
         }}
       />
@@ -39,12 +39,12 @@ export default function TresNo() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase text-[#C9A84C] mb-5">
-            <span className="w-6 h-px bg-[#C9A84C]" />
+          <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase text-[#C38335] mb-5">
+            <span className="w-6 h-px bg-[#C38335]" />
             {t("eyebrow")}
-            <span className="w-6 h-px bg-[#C9A84C]" />
+            <span className="w-6 h-px bg-[#C38335]" />
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight max-w-3xl mx-auto">
             {t("headline")}
           </h2>
         </div>
@@ -77,7 +77,7 @@ export default function TresNo() {
               <h3 className="text-xl font-bold text-white mb-4 leading-snug">
                 {c.title}
               </h3>
-              <p className="text-blue-200/70 text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed" style={{ color: "rgba(245,241,234,0.70)" }}>
                 {c.body}
               </p>
 
@@ -94,7 +94,7 @@ export default function TresNo() {
 
         {/* Closing message */}
         <div className="mt-14 text-center max-w-2xl mx-auto">
-          <p className="text-blue-200/80 text-base leading-relaxed italic">
+          <p className="text-base sm:text-lg font-semibold leading-relaxed italic" style={{ color: "rgba(245,241,234,0.90)" }}>
             "{t("cierre")}"
           </p>
         </div>

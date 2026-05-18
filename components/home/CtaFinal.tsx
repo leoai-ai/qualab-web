@@ -7,38 +7,22 @@ export default function CtaFinal() {
   const locale = useLocale();
 
   return (
-    <section className="relative py-28 bg-[#F5F0E8] overflow-hidden">
-      {/* Subtle warm gradient blobs */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            radial-gradient(ellipse 55% 60% at 15% 50%, rgba(201,168,76,0.10) 0%, transparent 60%),
-            radial-gradient(ellipse 45% 55% at 85% 40%, rgba(58,125,68,0.08) 0%, transparent 55%)
-          `,
-        }}
-      />
-
-      {/* Decorative rings */}
-      <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 w-80 h-80 rounded-full border border-[#1B3A6B]/8" />
-      <div className="absolute right-[-40px] top-1/2 -translate-y-1/2 w-56 h-56 rounded-full border border-[#1B3A6B]/8" />
-      <div className="absolute left-[-80px] top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-[#1B3A6B]/8" />
-
+    <section className="relative py-28 bg-[#F5F1EA] overflow-hidden">
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Qualab con tipografía y colores del logo */}
         <p className="inline-flex items-center gap-3 mb-6">
-          <span className="w-6 h-px bg-[#C9A84C]" />
+          <span className="w-6 h-px bg-[#C38335]" />
           <span
             className="text-sm font-bold tracking-[0.22em] uppercase"
-            style={{ color: "#C9A84C", letterSpacing: "0.22em" }}
+            style={{ color: "#C38335", letterSpacing: "0.22em" }}
           >
             QUALAB
           </span>
-          <span className="w-6 h-px bg-[#C9A84C]" />
+          <span className="w-6 h-px bg-[#C38335]" />
         </p>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1B3A6B] leading-tight mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282625] leading-tight mb-6">
           {t("headline")}
         </h2>
         <p className="text-gray-600 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
@@ -46,7 +30,7 @@ export default function CtaFinal() {
         </p>
         <Link
           href={`/${locale}/contacto`}
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#1B3A6B] text-white font-semibold text-base hover:bg-blue-900 transition-colors"
+          className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#5A102D] text-white font-semibold text-base hover:bg-[#2B0920] transition-colors"
         >
           {t("cta")} <ArrowRight size={18} />
         </Link>

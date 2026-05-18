@@ -54,17 +54,9 @@ export default function IngredientCards() {
   ];
 
   return (
-    <section className="py-24 bg-[#F5F0E8] relative overflow-hidden">
-      {/* Ghost text */}
-      <div
-        className="absolute -top-4 left-0 text-[9rem] font-black text-[#1B3A6B]/[0.04] select-none leading-none pointer-events-none whitespace-nowrap"
-        aria-hidden
-      >
-        INGREDIENTES
-      </div>
-
+    <section className="pt-6 pb-11 bg-[#F5F1EA] relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
+        <div className="mb-8">
           <SectionHeader eyebrow={t("eyebrow")} headline={t("headline")} />
         </div>
 
@@ -102,7 +94,7 @@ export default function IngredientCards() {
 
               {/* Featured badge */}
               {ing.featured && (
-                <span className="absolute top-5 left-5 z-10 text-[10px] font-bold tracking-widest uppercase bg-[#C9A84C] text-white px-3 py-1.5 rounded-full">
+                <span className="absolute top-5 left-5 z-10 text-[10px] font-bold tracking-widest uppercase bg-[#C38335] text-white px-3 py-1.5 rounded-full">
                   {ing.tag}
                 </span>
               )}
@@ -132,10 +124,11 @@ export default function IngredientCards() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-5 text-center">
           <Link
             href={`/${locale}/ingredientes`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#1B3A6B] hover:underline"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 text-sm font-semibold transition-colors hover:bg-[#5A102D] hover:text-white hover:border-[#5A102D]"
+            style={{ borderColor: "#282625", color: "#282625" }}
           >
             {t("ver_todos")} <ArrowRight size={14} />
           </Link>

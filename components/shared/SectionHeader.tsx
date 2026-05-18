@@ -10,15 +10,15 @@ export default function SectionHeader({ eyebrow, headline, body, center, light }
   return (
     <div className={center ? "text-center" : ""}>
       {eyebrow && (
-        <p className={`text-xs font-semibold tracking-widest uppercase mb-3 ${light ? "text-blue-300" : "text-[#3A7D44]"}`}>
+        <p className={`text-xs font-semibold tracking-widest uppercase mb-3 ${light ? "text-blue-300" : "text-[#596943]"}`}>
           {eyebrow}
         </p>
       )}
-      <h2 className={`text-3xl sm:text-4xl font-bold leading-tight tracking-tight ${light ? "text-white" : "text-[#1B3A6B]"}`}>
+      <h2 className={`text-4xl sm:text-5xl font-bold leading-tight tracking-tight ${light ? "text-white" : "text-[#282625]"}`}>
         {headline}
       </h2>
       {body && (
-        <p className={`mt-4 text-base sm:text-lg leading-relaxed max-w-2xl ${center ? "mx-auto" : ""} ${light ? "text-blue-100" : "text-gray-600"}`}>
+        <p className={`mt-5 text-lg sm:text-xl leading-relaxed max-w-2xl ${center ? "mx-auto" : ""} ${light ? "text-blue-100" : "text-gray-600"}`}>
           {body}
         </p>
       )}

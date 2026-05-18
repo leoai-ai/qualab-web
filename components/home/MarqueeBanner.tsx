@@ -111,11 +111,12 @@ export default function MarqueeBanner() {
       )}
 
       <div
-        className="sticky top-16 overflow-hidden mt-16 z-40"
+        className="relative overflow-hidden"
         style={{
-          background: "linear-gradient(105deg, #8B0000 0%, #B8001A 30%, #C8102E 55%, #A00015 80%, #7A000E 100%)",
-          paddingTop: "30px",
-          paddingBottom: "30px",
+          background: "linear-gradient(105deg, #2B0920 0%, #5A102D 35%, #7A1834 60%, #5A102D 80%, #2B0920 100%)",
+          paddingTop: "22px",
+          paddingBottom: "22px",
+          opacity: 0.82,
         }}
       >
         {/* Molecular pattern overlay */}
@@ -141,9 +142,9 @@ export default function MarqueeBanner() {
 
         {/* Left / right fades */}
         <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to right, #8B0000, transparent)" }} />
+          style={{ background: "linear-gradient(to right, #2B0920, transparent)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to left, #7A000E, transparent)" }} />
+          style={{ background: "linear-gradient(to left, #2B0920, transparent)" }} />
 
         {/* Scrolling track — two identical copies side by side */}
         <div className="relative z-20 marquee-track flex items-center whitespace-nowrap">

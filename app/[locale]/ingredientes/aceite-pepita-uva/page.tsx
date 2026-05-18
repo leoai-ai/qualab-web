@@ -36,18 +36,30 @@ export default function AceitePage() {
       intro={t("intro")}
       origenTitle={t("origen_title")}
       origenBody={t("origen_body")}
+      compuestoTitle={t("compuesto_title")}
+      compuestoBody={t("compuesto_body")}
+      whyTitle={t("why_title")}
+      whyItems={[t("why_1"), t("why_2"), t("why_3"), t("why_4")]}
       appsTitle={t("apps_title")}
       apps={[t("app_1"), t("app_2"), t("app_3"), t("app_4")]}
       specTitle={t("spec_title")}
       specs={[
         { key: "Formato", val: t("spec_format") },
-        { key: "Color", val: t("spec_color") },
+        { key: "Extracción", val: t("spec_extraction") },
+        { key: "Grasas poliinsaturadas", val: t("spec_pufa") },
+        { key: "Vitamina E", val: t("spec_vite") },
         { key: "Fuente", val: t("spec_source") },
         { key: "Origen", val: t("spec_origin") },
       ]}
+      badges={[
+        { iconName: "WheatOff",    label: "Sin Gluten",                                        color: "#C5CCB5" },
+        { iconName: "Sprout",      label: "Sin OGM · No transgénico",                          color: "#596943" },
+        { iconName: "Leaf",        label: "Natural",                                           color: "#C38335" },
+        { iconName: "ShieldCheck", label: "Sin BSE-TSE · Libre de proteína animal de riesgo", color: "#D7C4A8" },
+      ]}
       cta={t("cta")}
       contactHref={`/${locale}/contacto`}
-      accentColor="#4E9B5A"
+      accentColor="#596943"
       heroBg="/Aceite_uva.png"
     />
   );

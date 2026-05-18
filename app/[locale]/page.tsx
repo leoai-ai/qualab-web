@@ -3,10 +3,8 @@ import MarqueeBanner from "@/components/home/MarqueeBanner";
 import Hero from "@/components/home/Hero";
 import StatsStrip from "@/components/home/StatsStrip";
 import ProblemBlock from "@/components/home/ProblemBlock";
-import QueHacemos from "@/components/home/QueHacemos";
 import IngredientCards from "@/components/home/IngredientCards";
 import TresNo from "@/components/home/TresNo";
-import AliadosStrip from "@/components/home/AliadosStrip";
 import CtaFinal from "@/components/home/CtaFinal";
 
 export async function generateMetadata({
@@ -40,14 +38,12 @@ export async function generateMetadata({
 export default function HomePage() {
   return (
     <>
-      <MarqueeBanner />
       <Hero />
       <StatsStrip />
       <ProblemBlock />
-      <QueHacemos />
       <IngredientCards />
+      <MarqueeBanner />
       <TresNo />
-      <AliadosStrip />
       <CtaFinal />
     </>
   );

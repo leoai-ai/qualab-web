@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
@@ -12,6 +12,14 @@ export default function Navbar() {
   const locale = useLocale();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 60);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const otherLocale = locale === "es" ? "en" : "es";
   const localizedPath = pathname.replace(`/${locale}`, `/${otherLocale}`);
@@ -19,44 +27,47 @@ export default function Navbar() {
   const links = [
     { href: `/${locale}/nosotros`, label: t("nosotros") },
     { href: `/${locale}/ingredientes`, label: t("ingredientes") },
-    { href: `/${locale}/contacto`, label: t("contacto") },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled
+        ? "bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm"
+        : "bg-transparent border-b border-transparent"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center">
+          <Link
+            href={`/${locale}`}
+            className="flex items-center"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <Image
               src="/logo-qualab.png"
               alt="Qualab"
-              width={120}
-              height={40}
-              className="h-10 w-auto object-contain"
+              width={220}
+              height={72}
+              className={`h-16 w-auto object-contain transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
               priority
             />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Desktop nav + right side — todo junto a la derecha */}
+          <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-[#1B3A6B] transition-colors"
+                className={`text-base font-medium px-3 py-1.5 rounded-full transition-all duration-200 hover:bg-[#5A102D] hover:text-white ${scrolled ? "text-gray-600" : "text-white/80"}`}
               >
                 {link.label}
               </Link>
             ))}
-          </nav>
-
-          {/* Right side */}
-          <div className="hidden md:flex items-center gap-4">
             {/* Language switcher */}
             <Link
               href={localizedPath}
-              className="text-xs font-semibold tracking-widest text-gray-400 hover:text-[#1B3A6B] transition-colors uppercase"
+              className={`text-xs font-semibold tracking-widest transition-colors uppercase ${scrolled ? "text-gray-400 hover:text-[#282625]" : "text-white/60 hover:text-white"}`}
             >
               {otherLocale}
             </Link>
@@ -64,7 +75,7 @@ export default function Navbar() {
             <Link
               href={`/${locale}/contacto`}
               className="px-4 py-2 text-sm font-semibold rounded-full text-white transition-colors"
-              style={{ backgroundColor: "#1B3A6B" }}
+              style={{ backgroundColor: "#5A102D" }}
             >
               {t("cta")}
             </Link>
@@ -88,7 +99,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="block text-sm font-medium text-gray-700 hover:text-[#1B3A6B] py-2"
+              className="block text-sm font-medium text-gray-700 hover:text-[#282625] py-2"
               onClick={() => setOpen(false)}
             >
               {link.label}
@@ -105,7 +116,7 @@ export default function Navbar() {
             <Link
               href={`/${locale}/contacto`}
               className="px-4 py-2 text-sm font-semibold rounded-full text-white"
-              style={{ backgroundColor: "#1B3A6B" }}
+              style={{ backgroundColor: "#5A102D" }}
               onClick={() => setOpen(false)}
             >
               {t("cta")}

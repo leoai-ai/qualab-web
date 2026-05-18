@@ -8,7 +8,7 @@ const PHOTOS = [
   "https://images.unsplash.com/photo-1638262052640-82e94d64664a?w=600&q=80&auto=format&fit=crop",
 ];
 
-const ACCENTS = ["#1B3A6B", "#3A7D44", "#1E3A5F", "#7A5C10"];
+const ACCENTS = ["#5A102D", "#596943", "#1E3A5F", "#7A5C10"];
 const NUMBERS = ["01", "02", "03", "04"];
 
 export default function DiferencialesGrid() {
@@ -28,7 +28,7 @@ export default function DiferencialesGrid() {
         className="absolute right-[-120px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(27,58,107,0.05) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(90,16,45,0.05) 0%, transparent 70%)",
         }}
       />
 
@@ -67,7 +67,7 @@ export default function DiferencialesGrid() {
                 {/* Accent dot */}
                 <span
                   className="absolute top-4 right-4 w-2.5 h-2.5 rounded-full"
-                  style={{ backgroundColor: ACCENTS[i] === "#7A5C10" ? "#C9A84C" : ACCENTS[i] === "#3A7D44" ? "#3A7D44" : "#C9A84C" }}
+                  style={{ backgroundColor: ACCENTS[i] === "#7A5C10" ? "#C38335" : ACCENTS[i] === "#596943" ? "#596943" : "#C38335" }}
                 />
               </div>
 
@@ -76,7 +76,7 @@ export default function DiferencialesGrid() {
                 className="p-6 border-t-2 transition-colors duration-300"
                 style={{ borderColor: ACCENTS[i] + "33" }}
               >
-                <h3 className="font-bold text-[#1B3A6B] mb-2 group-hover:text-[#1B3A6B] leading-snug">
+                <h3 className="font-bold text-[#282625] mb-2 group-hover:text-[#282625] leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed">

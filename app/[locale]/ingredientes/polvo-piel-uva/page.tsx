@@ -10,15 +10,15 @@ export async function generateMetadata({
   const { locale } = await params;
   const isES = locale === "es";
   return {
-    title: isES ? "Polvo de Piel de Uva" : "Grape Skin Powder",
+    title: isES ? "Fibra de Piel de Uva" : "Grape Skin Fiber",
     description: isES
-      ? "Polvo de piel de uva deshidratada y micronizada. Fuente natural de antocianinas, resveratrol y fibra dietaria. Origen Mendoza, Argentina."
-      : "Dehydrated and micronized grape skin powder. Natural source of anthocyanins, resveratrol and dietary fiber. Origin Mendoza, Argentina.",
+      ? "Fibra vegetal de piel de uva tinta. 55% de fibra dietaria, 1.173 mg de antocianinas y 36,96 mg/g de polifenoles por 100 g. Origen Mendoza, Argentina."
+      : "Vegetable fiber from red grape skins. 55% dietary fiber, 1,173 mg of anthocyanins and 36.96 mg/g of polyphenols per 100 g. Origin Mendoza, Argentina.",
     openGraph: {
-      title: isES ? "Polvo de Piel de Uva | Qualab" : "Grape Skin Powder | Qualab",
+      title: isES ? "Fibra de Piel de Uva | Qualab" : "Grape Skin Fiber | Qualab",
       description: isES
-        ? "Concentrado natural de polifenoles y fibra. Para alimentos funcionales, suplementos y cosmética natural."
-        : "Natural concentrate of polyphenols and fiber. For functional foods, supplements and natural cosmetics.",
+        ? "55% de fibra dietaria total, rica en antocianinas y polifenoles. Para horneados, granolas, chocolates y suplementos."
+        : "55% total dietary fiber, rich in anthocyanins and polyphenols. For baked goods, granolas, chocolates and supplements.",
       siteName: "Qualab",
       type: "website",
     },
@@ -36,18 +36,29 @@ export default function PolvoPielPage() {
       intro={t("intro")}
       origenTitle={t("origen_title")}
       origenBody={t("origen_body")}
+      compuestoTitle={t("compuesto_title")}
+      compuestoBody={t("compuesto_body")}
+      whyTitle={t("why_title")}
+      whyItems={[t("why_1"), t("why_2"), t("why_3"), t("why_4")]}
       appsTitle={t("apps_title")}
       apps={[t("app_1"), t("app_2"), t("app_3"), t("app_4")]}
       specTitle={t("spec_title")}
       specs={[
         { key: "Formato", val: t("spec_format") },
-        { key: "Color", val: t("spec_color") },
-        { key: "Fuente", val: t("spec_source") },
+        { key: "Granulometría", val: t("spec_granulo") },
+        { key: "Fibra dietaria total", val: t("spec_fibra") },
+        { key: "Antocianinas", val: t("spec_antocia") },
         { key: "Origen", val: t("spec_origin") },
+      ]}
+      badges={[
+        { iconName: "WheatOff",    label: "Sin Gluten · < 10 ppm",                             color: "#C5CCB5" },
+        { iconName: "Leaf",        label: "Apto Veganos",                                      color: "#C38335" },
+        { iconName: "Sprout",      label: "Sin OGM · No transgénico",                          color: "#596943" },
+        { iconName: "ShieldCheck", label: "Sin BSE-TSE · Libre de proteína animal de riesgo", color: "#D7C4A8" },
       ]}
       cta={t("cta")}
       contactHref={`/${locale}/contacto`}
-      accentColor="#5C2D6B"
+      accentColor="#5A102D"
       heroBg="/productos_ingredientes.png"
     />
   );

@@ -1,21 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --brand-blue: #1B3A6B;
-  --brand-green: #3A7D44;
-  --brand-cream: #F5F0E8;
-  --brand-gold: #C9A84C;
+  /* Paleta oficial Manual de Marca Qualab — Mayo 2026 */
+  --brand-uva:      #2B0920; /* impacto / fondos profundos */
+  --brand-borgona:  #5A102D; /* marca / fondos oscuros */
+  --brand-vino:     #7A1834; /* titulares sobre oscuro */
+  --brand-antociano:#B71D48; /* CTA / énfasis */
+  --brand-ciruela:  #482557; /* datos */
+  --brand-piel:     #8D536B; /* apoyo */
+  --brand-grafito:  #282625; /* base texto */
+  --brand-cream:    #F5F1EA; /* fondo principal */
+  --brand-arena:    #D7C4A8; /* fondos secundarios */
+  --brand-amber:    #C38335; /* acento */
+  --brand-cacao:    #5B3528; /* alimentos */
+  --brand-verde:    #596943; /* validación */
+  --brand-savia:    #C5CCB5; /* soporte */
   --background: #ffffff;
-  --foreground: #111827;
+  --foreground: #282625;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-blue: var(--brand-blue);
-  --color-brand-green: var(--brand-green);
   --color-brand-cream: var(--brand-cream);
-  --color-brand-gold: var(--brand-gold);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,10 +30,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, sans-serif;
+  /* Manual de Marca: cuerpo en Arial (Aptos/Arial) */
+  font-family: Arial, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* ── TIPOGRAFÍA: Georgia Bold para todos los titulares ── */
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
 }
