@@ -83,16 +83,11 @@ export default function Hero() {
       {/* ── CONTENIDO (zona aireada superior) ── */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
         <div className="max-w-2xl">
-          <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: "#C38335" }}>
-            <span className="w-7 h-px" style={{ backgroundColor: "#C38335" }} />
-            {t("eyebrow")}
-          </p>
-
           <h1 className="text-4xl sm:text-5xl lg:text-[3.7rem] font-bold leading-[1.07] tracking-tight mb-6" style={{ color: "#282625" }}>
             {t("headline")}
           </h1>
 
-          <p className="text-lg sm:text-xl font-medium leading-relaxed max-w-xl mb-9" style={{ color: "#282625" }}>
+          <p className="text-lg sm:text-xl font-semibold leading-relaxed max-w-xl mb-9" style={{ color: "#000000", textShadow: "0 1px 10px rgba(245,241,234,0.85)" }}>
             {t("subheadline")}
           </p>
 
