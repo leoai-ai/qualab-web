@@ -205,7 +205,7 @@ export default function IngredientPage({
       )}
 
       {/* Apps + Specs */}
-      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: appsBg ? "#F5F1EA" : "#ffffff" }}>
+      <section className="py-20 relative lg:overflow-hidden" style={{ backgroundColor: appsBg ? "#F5F1EA" : "#ffffff" }}>
         {appsBg && (
           <>
             <div className="absolute inset-0 bg-cover hidden lg:block" style={{ backgroundImage: `url('${appsBg}')`, backgroundPosition: appsBgPosition }} />
@@ -228,7 +228,7 @@ export default function IngredientPage({
             </div>
 
             {/* Specs — fondo grafito según manual */}
-            <div className="rounded-2xl p-8 text-white" style={{ backgroundColor: "#282625" }}>
+            <div className="rounded-2xl p-8 text-white" style={{ backgroundColor: "#282625", transform: "translateZ(0)", WebkitBackfaceVisibility: "hidden" }}>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-1 h-6 rounded-full" style={{ backgroundColor: accentColor }} />
                 <h3 className="font-bold text-lg">{specTitle}</h3>
