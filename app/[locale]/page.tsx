@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import ColorGama from "@/components/home/ColorGama";
-import StatsStrip from "@/components/home/StatsStrip";
 import ProblemBlock from "@/components/home/ProblemBlock";
 import IngredientCards from "@/components/home/IngredientCards";
 import CtaFinal from "@/components/home/CtaFinal";
@@ -40,7 +39,6 @@ export default function HomePage() {
       <Hero />
       <ColorGama />
       <IngredientCards />
-      <StatsStrip />
       <ProblemBlock />
       <CtaFinal />
     </>
