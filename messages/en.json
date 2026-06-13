@@ -316,7 +316,8 @@
       "enviar": "Send message",
       "enviando": "Sending...",
       "success": "Message sent! We'll be in touch soon.",
-      "error": "Something went wrong. Please write to us at informes@qualab.co"
+      "error": "Something went wrong. Please write to us at informes@qualab.co",
+      "consent": "I accept the <link>Privacy Policy</link> and the processing of my data to respond to my inquiry."
     },
     "info": {
       "email": "informes@qualab.co",
@@ -341,6 +342,7 @@
     "tagline": "We transform viticultural biomass into ingredients that improve lives.",
     "nav_title": "Navigation",
     "legal": "Qualab S.A.S. — Mendoza, Argentina",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy"
   }
 }

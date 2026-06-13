@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 import { Mail, MapPin, Send } from "lucide-react";
 import FaqSection from "@/components/ingredientes/FaqSection";
 
 export default function ContactoPage() {
   const t = useTranslations("contacto");
   const f = useTranslations("contacto.form");
+  const locale = useLocale();
 
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [form, setForm] = useState({
@@ -160,6 +162,27 @@ export default function ContactoPage() {
                   {status === "error" && (
                     <p className="text-red-600 text-sm">{f("error")}</p>
                   )}
+
+                  {/* Consentimiento de datos (obligatorio) */}
+                  <label className="flex items-start gap-3 text-sm leading-relaxed text-gray-600">
+                    <input
+                      type="checkbox"
+                      required
+                      className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-[#5A102D]"
+                    />
+                    <span>
+                      {f.rich("consent", {
+                        link: (chunks) => (
+                          <Link
+                            href={`/${locale}/privacidad`}
+                            className="font-medium text-[#5A102D] underline hover:opacity-80"
+                          >
+                            {chunks}
+                          </Link>
+                        ),
+                      })}
+                    </span>
+                  </label>
 
                   <button
                     type="submit"

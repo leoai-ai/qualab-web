@@ -316,7 +316,8 @@
       "enviar": "Enviar mensaje",
       "enviando": "Enviando...",
       "success": "¡Mensaje enviado! Te contactamos pronto.",
-      "error": "Algo salió mal. Por favor escribinos a informes@qualab.co"
+      "error": "Algo salió mal. Por favor escribinos a informes@qualab.co",
+      "consent": "Acepto la <link>Política de Privacidad</link> y el tratamiento de mis datos para responder mi consulta."
     },
     "info": {
       "email": "informes@qualab.co",
@@ -341,6 +342,7 @@
     "tagline": "Transformamos la biomasa vitivinícola en ingredientes que mejoran vidas.",
     "nav_title": "Navegación",
     "legal": "Qualab S.A.S. — Mendoza, Argentina",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad"
   }
 }

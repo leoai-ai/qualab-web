@@ -84,7 +84,12 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs" style={{ borderTop: "1px solid rgba(245,241,234,0.10)", color: "rgba(245,241,234,0.40)" }}>
           <span>{t("legal")}</span>
-          <span>{t("rights")}</span>
+          <div className="flex items-center gap-4">
+            <Link href={`/${locale}/privacidad`} className="hover:text-white transition-colors">
+              {t("privacy")}
+            </Link>
+            <span>{t("rights")}</span>
+          </div>
         </div>
       </div>
     </footer>
