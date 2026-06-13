@@ -60,7 +60,13 @@ export default function AceitePage() {
       cta={t("cta")}
       contactHref={`/${locale}/contacto`}
       accentColor="#596943"
-      heroBg="/Aceite_uva.png"
+      heroBg="/aceiteprincipal.webp"
+      heroBgPosition="right bottom"
+      heroBgSize="78%"
+      heroLight
+      appsBg="/ingredientes/aceite-fondo.jpg"
+      appsBgOpacity={0.55}
+      whyDark
     />
   );
 }

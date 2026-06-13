@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
-import SectionHeader from "@/components/shared/SectionHeader";
 
 export async function generateMetadata({
   params,
@@ -14,8 +13,8 @@ export async function generateMetadata({
   return {
     title: isES ? "Ingredientes" : "Ingredients",
     description: isES
-      ? "Colorante natural de uva, aceite de pepita y polvo de piel. Ingredientes bioactivos de origen vitivinícola con trazabilidad completa desde Mendoza, Argentina."
-      : "Natural grape colorant, seed oil and skin powder. Bioactive ingredients of viticultural origin with full traceability from Mendoza, Argentina.",
+      ? "Aceite de pepita de uva y piel de uva en polvo. Ingredientes bioactivos de origen vitivinícola con trazabilidad completa desde Mendoza, Argentina."
+      : "Grape seed oil and grape skin fiber. Bioactive ingredients of viticultural origin with full traceability from Mendoza, Argentina.",
     openGraph: {
       title: isES ? "Ingredientes | Qualab" : "Ingredients | Qualab",
       description: isES
@@ -33,21 +32,12 @@ export default function IngredientesPage() {
 
   const items = [
     {
-      key: "colorante",
-      href: `/${locale}/ingredientes/colorante-natural`,
-      name: t("colorante.name"),
-      intro: t("colorante.intro"),
-      tag: t("colorante.tag"),
-      color: "#7B1D3B",
-      featured: true,
-    },
-    {
       key: "aceite",
       href: `/${locale}/ingredientes/aceite-pepita-uva`,
       name: t("aceite.name"),
       intro: t("aceite.intro"),
       color: "#596943",
-      featured: false,
+      photo: "/ingredientes/aceite.jpg",
     },
     {
       key: "polvo",
@@ -55,47 +45,98 @@ export default function IngredientesPage() {
       name: t("polvo.name"),
       intro: t("polvo.intro"),
       color: "#5C2D6B",
-      featured: false,
+      photo: "/ingredientes/polvo.jpg",
     },
   ];
 
   return (
     <>
-      <section className="pt-16 bg-[#5A102D] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <SectionHeader
-            eyebrow={t("hero.eyebrow")}
-            headline={t("hero.headline")}
-            body={t("hero.body")}
-            light
-          />
+      {/* ── HERO con foto de fondo (estilo Colorantes) ── */}
+      <section className="relative min-h-[60vh] flex items-start overflow-hidden bg-[#F5F1EA]">
+        {/* Foto de fondo */}
+        <div
+          className="absolute inset-0 bg-cover"
+          style={{ backgroundImage: "url('/ingredientes-fondo.webp')", backgroundPosition: "center right" }}
+        />
+        {/* Velo claro superior */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(245,241,234,0.85) 0%, rgba(245,241,234,0.4) 30%, rgba(245,241,234,0.05) 55%, transparent 72%)",
+          }}
+        />
+        {/* Velo claro desde la izquierda */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(95deg, rgba(245,241,234,0.95) 0%, rgba(245,241,234,0.72) 30%, rgba(245,241,234,0.22) 54%, transparent 72%)",
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 pb-16">
+          <div className="max-w-xl">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: "#C38335" }}>
+              {t("hero.eyebrow")}
+            </p>
+            <h1
+              className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.08] tracking-tight mb-5"
+              style={{
+                backgroundImage: "linear-gradient(95deg, #5C2D6B 0%, #5A102D 55%, #7A1834 100%)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                color: "transparent",
+                width: "fit-content",
+              }}
+            >
+              {t("hero.headline")}
+            </h1>
+            <p className="text-lg sm:text-xl leading-relaxed max-w-lg" style={{ color: "#282625" }}>
+              {t("hero.subtitle")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Franja morada: subtítulo extendido ── */}
+      <section className="bg-[#5A102D] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl mx-auto text-center space-y-4">
+            <p className="text-lg sm:text-xl leading-relaxed text-blue-100">{t("hero.body")}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-blue-300">{t("hero.body2")}</p>
+          </div>
         </div>
       </section>
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {items.map((item) => (
-              <div key={item.key} className="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+              <Link
+                key={item.key}
+                href={item.href}
+                className="group relative block border border-gray-100 rounded-2xl overflow-hidden bg-white transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-2xl hover:z-10"
+              >
+                {/* Foto del ingrediente */}
+                <div className="w-full aspect-[3/2] overflow-hidden">
+                  <div
+                    className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                    style={{ backgroundImage: `url('${item.photo}')`, backgroundColor: "#F5F1EA" }}
+                  />
+                </div>
                 {/* Color band */}
-                <div className="h-2 w-full" style={{ backgroundColor: item.color }} />
+                <div className="h-1.5 w-full" style={{ backgroundColor: item.color }} />
                 <div className="p-8">
-                  {item.featured && (
-                    <span className="inline-block text-xs font-semibold bg-[#C38335] text-white px-3 py-1 rounded-full mb-4">
-                      {item.tag}
-                    </span>
-                  )}
                   <h2 className="text-xl font-bold text-[#282625] mb-3">{item.name}</h2>
                   <p className="text-sm text-gray-600 leading-relaxed mb-6">{item.intro}</p>
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
+                  <span
+                    className="inline-flex items-center gap-2 text-sm font-semibold"
                     style={{ color: item.color }}
                   >
-                    Ver ingrediente <ArrowRight size={14} />
-                  </Link>
+                    Ver ingrediente <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

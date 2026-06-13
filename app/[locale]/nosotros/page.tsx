@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { ShieldCheck, Target, Wrench, TrendingUp, Lightbulb, Shuffle, PiggyBank, Hammer } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
+import TresNo from "@/components/home/TresNo";
 
 export async function generateMetadata({
   params,
@@ -46,6 +47,7 @@ export default function NosotrosPage() {
       <section className="pt-16 bg-[#5A102D] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <SectionHeader
+            as="h1"
             eyebrow={t("hero.eyebrow")}
             headline={t("hero.headline")}
             body={t("hero.body")}
@@ -71,6 +73,16 @@ export default function NosotrosPage() {
               <p className="text-gray-600 text-sm leading-relaxed">{t("proposito.historia_body")}</p>
             </div>
           </div>
+
+          {/* Modelo de negocio — en una frase */}
+          <div className="mt-14 max-w-3xl mx-auto text-center">
+            <p className="text-xs font-semibold tracking-widest uppercase text-[#596943] mb-3">
+              {t("proposito.modelo_eyebrow")}
+            </p>
+            <p className="text-xl sm:text-2xl font-bold text-[#282625] leading-snug">
+              {t("proposito.modelo")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -86,6 +98,9 @@ export default function NosotrosPage() {
           <p className="text-blue-200 text-lg leading-relaxed">{t("vision.body")}</p>
         </div>
       </section>
+
+      {/* Nuestro Enfoque (movido desde Home) */}
+      <TresNo />
 
       {/* Valores */}
       <section className="py-20 bg-white">

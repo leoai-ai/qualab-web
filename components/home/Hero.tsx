@@ -1,70 +1,135 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
+
+// Fotos del hero (estilo Saporiti — aplicaciones reales con color natural, fondo claro).
+// Guardá las definitivas en /public con estos nombres y la rotación las toma sola.
+const SLIDES = ["/hero-1.jpg", "/hero-2.jpg", "/hero-3.jpg", "/hero-4.jpg"];
+const FALLBACK = "/hero-aplicaciones.jpg";
 
 export default function Hero() {
   const t = useTranslations("home.hero");
   const locale = useLocale();
 
-  return (
-    <section
-      className="relative min-h-screen flex items-start overflow-hidden"
-      style={{ background: "#2B0920" }}
-    >
-      {/* ── IMAGEN DE FONDO ── */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-aplicaciones.jpg')", filter: "brightness(0.65)" }}
-      />
+  const [slides, setSlides] = useState<string[]>([FALLBACK]);
+  const [active, setActive] = useState(0);
 
-      {/* ── OVERLAY: oscurece para legibilidad del texto ── */}
+  // Detecta qué imágenes existen para habilitar la rotación.
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all(
+      SLIDES.map(
+        (src) =>
+          new Promise<string | null>((resolve) => {
+            const img = new window.Image();
+            img.onload = () => resolve(src);
+            img.onerror = () => resolve(null);
+            img.src = src;
+          })
+      )
+    ).then((found) => {
+      if (cancelled) return;
+      const ok = found.filter((s): s is string => Boolean(s));
+      if (ok.length) setSlides(ok);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Rotación automática
+  useEffect(() => {
+    if (slides.length < 2) return;
+    const id = setInterval(() => setActive((i) => (i + 1) % slides.length), 3000);
+    return () => clearInterval(id);
+  }, [slides]);
+
+  return (
+    <section className="relative min-h-[72vh] flex items-start overflow-hidden bg-[#F5F1EA]">
+      {/* ── FONDOS ROTATIVOS (imagen clara, anclada abajo) ── */}
+      {slides.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 bg-cover transition-opacity duration-700 ease-in-out"
+          style={{
+            backgroundImage: `url('${src}')`,
+            backgroundPosition: "center bottom",
+            opacity: i === active ? 1 : 0,
+          }}
+        />
+      ))}
+
+      {/* ── GRADIENTES de legibilidad sobre fondo claro ── */}
+      {/* Scrim superior */}
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.05) 100%)" }}
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(245,241,234,0.85) 0%, rgba(245,241,234,0.45) 30%, rgba(245,241,234,0.05) 55%, transparent 72%)",
+        }}
+      />
+      {/* Scrim izquierdo — zona del texto (estilo Saporiti) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(95deg, rgba(245,241,234,0.88) 0%, rgba(245,241,234,0.60) 30%, rgba(245,241,234,0.20) 52%, transparent 68%)",
+        }}
       />
 
-      {/* ── CONTENT ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 w-full">
+      {/* ── CONTENIDO (zona aireada superior) ── */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 pb-16">
+        <div className="max-w-2xl">
+          <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: "#C38335" }}>
+            <span className="w-7 h-px" style={{ backgroundColor: "#C38335" }} />
+            {t("eyebrow")}
+          </p>
 
-        {/* Headline — ancho para que respire */}
-        <h1 className="text-5xl sm:text-6xl lg:text-[5rem] font-bold text-white leading-[1.05] tracking-tight mb-6 max-w-4xl">
-          {t("headline")}
-        </h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-[3.7rem] font-bold leading-[1.07] tracking-tight mb-6" style={{ color: "#282625" }}>
+            {t("headline")}
+          </h1>
 
-        {/* Subtítulo — más contenido, bien legible */}
-        <p className="text-lg sm:text-xl lg:text-2xl font-medium leading-relaxed max-w-xl mb-10" style={{ color: "rgba(245,241,234,0.90)" }}>
-          {t("subheadline")}
-        </p>
+          <p className="text-lg sm:text-xl font-medium leading-relaxed max-w-xl mb-9" style={{ color: "#282625" }}>
+            {t("subheadline")}
+          </p>
 
-        {/* CTAs */}
-        <div className="flex flex-wrap gap-4">
-          <Link
-            href={`/${locale}/ingredientes`}
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-white text-sm font-semibold transition-colors"
-            style={{ backgroundColor: "#C38335" }}
-          >
-            {t("cta_primary")} <ArrowRight size={16} />
-          </Link>
-          <Link
-            href={`/${locale}/contacto`}
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-full border text-white text-sm font-semibold hover:bg-white/10 transition-colors"
-            style={{ borderColor: "rgba(245,241,234,0.25)" }}
-          >
-            {t("cta_secondary")}
-          </Link>
-        </div>
-
-        {/* Trust signals — certificaciones */}
-        <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2">
-          {["Sin Gluten", "Vegano", "Sin OGM", "Origen Natural"].map((cert) => (
-            <span
-              key={cert}
-              className="text-[11px] font-medium tracking-wider uppercase"
-              style={{ color: "rgba(245,241,234,0.45)" }}
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href={`/${locale}/colorantes`}
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-white text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#B71D48" }}
             >
-              {cert}
-            </span>
-          ))}
+              {t("cta_primary")} <ArrowRight size={16} />
+            </Link>
+            <Link
+              href={`/${locale}/ingredientes`}
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-white text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#2B0920" }}
+            >
+              {t("cta_secondary")} <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          {/* Indicadores de slide */}
+          {slides.length > 1 && (
+            <div className="mt-10 flex items-center gap-2">
+              {slides.map((s, i) => (
+                <button
+                  key={s}
+                  onClick={() => setActive(i)}
+                  aria-label={`Slide ${i + 1}`}
+                  className="h-1.5 rounded-full transition-all duration-300"
+                  style={{
+                    width: i === active ? 28 : 10,
+                    backgroundColor: i === active ? "#5A102D" : "rgba(40,38,37,0.25)",
+                  }}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
   "nav": {
     "nosotros": "Nosotros",
     "plataforma": "Plataforma",
+    "colorantes": "Colorantes",
     "ingredientes": "Ingredientes",
     "mercados": "Mercados",
     "ciencia": "Ciencia",
@@ -10,11 +11,17 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Plataforma de valorización vitivinícola",
-      "headline": "Colorantes naturales e ingredientes funcionales a partir de biomasa vitivinícola",
-      "subheadline": "Transformamos subproductos de la vid en soluciones de origen natural para alimentos, bebidas y nuevas aplicaciones industriales.",
-      "cta_primary": "Explorá los ingredientes",
-      "cta_secondary": "Hablemos de tu proyecto"
+      "eyebrow": "Colorantes naturales e ingredientes funcionales",
+      "headline": "Colores e ingredientes naturales para la industria de alimentos y bebidas",
+      "subheadline": "Una gama completa de colorantes naturales de origen vegetal e ingredientes funcionales que desarrollamos desde la vid. Soluciones de origen natural, listas para tu producto.",
+      "cta_primary": "Colorantes",
+      "cta_secondary": "Ingredientes"
+    },
+    "gama": {
+      "eyebrow": "Nuestra gama de colores",
+      "headline": "Una paleta completa de colores naturales",
+      "body": "Del rojo al azul, del amarillo al púrpura: una paleta natural lista para reemplazar los colorantes sintéticos en tus productos.",
+      "cta": "Ver todos los colorantes"
     },
     "stats": {
       "label1": "Industria global del vino",
@@ -32,6 +39,7 @@
     "ingredients": {
       "eyebrow": "Nuestros ingredientes",
       "headline": "Activos naturales de origen vitivinícola",
+      "body": "Transformamos subproductos de la vid en soluciones de origen natural para alimentos, bebidas y nuevas aplicaciones industriales.",
       "colorante": {
         "name": "Colorante Natural de Uva",
         "desc": "Antocianinas estabilizadas de pieles de uva tinta. El rojo de la uva, listo para la industria.",
@@ -42,7 +50,7 @@
         "desc": "Aceite prensado en frío, rico en ácidos grasos esenciales y vitamina E."
       },
       "polvo": {
-        "name": "Polvo de Piel de Uva",
+        "name": "Piel de uva en polvo",
         "desc": "Piel de uva deshidratada, fuente natural de polifenoles y fibra dietaria."
       },
       "label_featured": "Ingrediente estrella",
@@ -97,20 +105,67 @@
       "eyebrow": "Aliados y red"
     },
     "cta_final": {
-      "headline": "¿Estás explorando ingredientes naturales para nuevas aplicaciones?",
+      "headline": "¿Estás buscando colores o explorando ingredientes naturales para nuevas aplicaciones?",
       "body": "En Qualab trabajamos con empresas y partners interesados en desarrollar soluciones de origen vitivinícola con respaldo científico y aplicación industrial.",
       "cta": "Hablemos de tu proyecto"
     }
+  },
+  "colorantes_page": {
+    "eyebrow": "Colorantes naturales",
+    "headline": "Creamos los tonos que tus consumidores buscan",
+    "intro": "Color natural para bebidas, alimentos y nutrición.",
+    "hero_cta": "Ver colores",
+    "trend": "La industria se mueve hacia el color natural: los reguladores avanzan en la eliminación de los colorantes sintéticos derivados del petróleo y los consumidores eligen etiquetas limpias.",
+    "trend_source": "Tendencia global clean label · FDA y regulaciones internacionales",
+    "gallery_title": "Explora nuestros colores",
+    "gallery_body": "Qualab acerca al mercado colorantes naturales de extractos vegetales, pensados para aplicaciones en alimentos, bebidas y nutracéutica.",
+    "filtro_todos": "Todos",
+    "label_fuente": "Ingredientes",
+    "label_apps": "Aplicaciones",
+    "ver_ficha": "Ver ficha del color",
+    "m_pigmento": "Pigmento",
+    "m_intensidad": "Intensidad de color",
+    "m_ph": "Estabilidad / pH",
+    "m_dosis": "Dosis típica",
+    "m_formato": "Formato",
+    "m_vida": "Vida útil",
+    "m_certs": "Certificaciones",
+    "m_alternativa": "Alternativa natural a",
+    "m_cta": "Solicitá una muestra",
+    "m_blend_note": "Color desarrollado a medida. Consultanos por su ficha técnica y certificaciones.",
+    "ventajas_title": "Tecnología Crystal",
+    "ventajas_intro": "Un formato de secado que concentra el pigmento en cristales puros, sin portadores. Más color, más estable y con etiqueta más limpia.",
+    "v1_title": "Alta concentración",
+    "v1_body": "El pigmento se concentra en cristales: color intenso con dosis muy bajas y mayor rendimiento por kilo.",
+    "v2_title": "Vida útil prolongada",
+    "v2_body": "Hasta 5 años de estabilidad en almacenamiento seco, sin necesidad de refrigeración ni cadena de frío.",
+    "v3_title": "Sin portador (carrier-free)",
+    "v3_body": "Color puro, sin agentes de soporte. Etiqueta más limpia, menos polvo en el manejo y formulación más simple.",
+    "v4_title": "Alta solubilidad y clean label",
+    "v4_body": "Se disuelve con facilidad y es 100% de origen natural, con certificaciones según mercado.",
+    "industrias_title": "Aplicaciones por industria",
+    "industrias_body": "Trabajamos el color para las industrias que más lo necesitan, según cada aplicación y proceso.",
+    "i1": "Bebidas",
+    "i2": "Confitería y gomitas",
+    "i3": "Lácteos",
+    "i4": "Panadería",
+    "i5": "Helados",
+    "i6": "Snacks",
+    "cta_title": "¿Buscás color para tus productos?",
+    "cta_body": "Contanos tu aplicación, el tono que buscás y las condiciones de proceso. Te ayudamos a encontrar el colorante natural ideal y te enviamos una muestra.",
+    "cta_button": "Hablemos de tu proyecto"
   },
   "nosotros": {
     "hero": {
       "eyebrow": "Quiénes somos",
       "headline": "Una plataforma de innovación, no solo un proveedor",
-      "body": "Qualab nació del deseo de transformar una industria tradicional como la vitivinicultura en una plataforma de innovación, salud y sostenibilidad."
+      "body": "Qualab nació del deseo de transformar una industria tradicional como la vitivinicultura en una plataforma de innovación, ampliando su impacto con ingredientes naturales de aplicación real."
     },
     "proposito": {
       "eyebrow": "Nuestro propósito",
       "headline": "Qualab existe para ampliar el impacto que la vitivinicultura puede generar a partir de aquellos recursos y conocimientos que hoy todavía no expresan todo su potencial.",
+      "modelo_eyebrow": "En una frase",
+      "modelo": "Qualab ayuda a empresas de alimentos y bebidas a adoptar ingredientes naturales de origen vitivinícola que funcionan.",
       "historia_title": "Nuestra historia",
       "historia_body": "Qualab nació en 2018, dentro del mundo vitivinícola, a partir de la iniciativa de Fernando Buscema y con la convicción de que esta industria podía ampliar aún más el impacto que tradicionalmente expresa. En sus primeros años, la empresa se enfocó en soluciones para protección de cultivo. Más adelante, ese camino evolucionó hacia el desarrollo de ingredientes naturales. Hoy, Qualab conecta necesidades concretas con ingredientes de origen vitivinícola con aplicación real en alimentos, bebidas, cosmética funcional y medicina preventiva. Seguimos siendo parte del ecosistema del vino: no buscamos reemplazarlo, sino complementarlo y ampliar su alcance."
     },
@@ -142,7 +197,9 @@
     "hero": {
       "eyebrow": "Ingredientes",
       "headline": "Activos naturales de origen vitivinícola",
-      "body": "Ingredientes bioactivos obtenidos de la biomasa de la uva, con trazabilidad completa desde viñedos de altura de Mendoza."
+      "subtitle": "Soluciones funcionales que elevan el perfil nutricional, el color y el sabor de tus productos.",
+      "body": "Potenciá tus productos con la esencia de la vid mendocina: nuestro polvo de uva aporta fibra para la salud digestiva y potentes antioxidantes (ricos en polifenoles), mientras que el aceite de pepita destaca por su excelente perfil de grasas insaturadas saludables (alto nivel de ácido linoleico / omega-6).",
+      "body2": "Una sinergia natural que eleva el valor nutricional de tus creaciones, sumando propiedades antiinflamatorias y un atractivo sensorial único."
     },
     "colorante": {
       "tag": "Destacado",
@@ -207,12 +264,12 @@
       "spec_vite": "~20–50 mg / 100 g",
       "spec_source": "Semillas de uva (Vitis vinifera)",
       "spec_origin": "Mendoza, Argentina",
-      "cta": "Solicitar muestra / ficha técnica"
+      "cta": "Hablemos de tu proyecto"
     },
     "polvo": {
-      "name": "Fibra de Piel de Uva",
-      "headline": "Fibra de piel de uva: 55% de fibra dietaria total, con actividad antioxidante documentada",
-      "intro": "Fibra vegetal obtenida de pieles de uva tinta mendocina. 55% de fibra dietaria total, acompañada de 36,96 mg/g de polifenoles y 1.173 mg de antocianinas por 100 g. Aporta funcionalidad nutricional y bioactividad en formulaciones de panadería, granolas y chocolate.",
+      "name": "Piel de uva en polvo",
+      "headline": "Piel de uva en polvo: 55% de fibra dietaria total, con actividad antioxidante documentada",
+      "intro": "Polvo obtenido de pieles de uva tinta mendocina. 55% de fibra dietaria total, acompañado de 36,96 mg/g de polifenoles y 1.173 mg de antocianinas por 100 g. Aporta funcionalidad nutricional y bioactividad en formulaciones de panadería, granolas y chocolate.",
       "origen_title": "Origen",
       "origen_body": "Pieles de uva tinta separadas en el proceso de vinificación en Mendoza, Argentina. Deshidratadas y micronizadas (≤290 µm) para preservar compuestos activos. Registro RNPA 13-063537 / RNE 13-006690.",
       "compuesto_title": "Compuesto activo",
@@ -235,13 +292,15 @@
       "spec_gluten": "< 10 ppm",
       "spec_vegano": "Apto veganos",
       "spec_origin": "Mendoza, Argentina",
-      "cta": "Solicitar muestra / ficha técnica"
+      "cta": "Hablemos de tu proyecto"
     }
   },
   "contacto": {
     "eyebrow": "Contacto",
-    "headline": "Solicitá una muestra",
-    "body": "Si estás explorando ingredientes naturales, aplicaciones industriales o nuevas formas de valorizar biomasa vitivinícola, podemos conversar. Qualab trabaja con empresas, partners e instituciones interesadas en desarrollar soluciones de origen vitivinícola con respaldo científico y aplicación real.",
+    "headline": "Hablemos de tu próximo desarrollo",
+    "body": "Ya sea que busques innovar con ingredientes funcionales, integrar colorantes naturales de origen vegetal, o descubrir nuevas formas de valorizar biomasa vitivinícola, estamos acá para ayudarte a superar los desafíos de tu formulación.",
+    "body2": "En Qualab colaboramos codo a codo con empresas e instituciones interesadas en cocrear soluciones innovadoras, ofreciendo un soporte técnico con respaldo científico y aplicación industrial real.",
+    "body3": "Contanos qué problema estás intentando resolver y veamos cómo podemos potenciar tus productos.",
     "form": {
       "nombre": "Nombre",
       "empresa": "Empresa / institución",
@@ -263,6 +322,19 @@
       "email": "informes@qualab.co",
       "ubicacion": "Mendoza, Argentina",
       "linkedin": "LinkedIn"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Los colorantes son aptos para uso alimentario?",
+      "a1": "Sí. Están habilitados bajo FDA 21 CFR 73.260 (EE.UU.) y cumplen con el Código de Prácticas NATCOL (UE). Cuentan además con certificaciones Kosher OU, Halal y Sin Gluten. Consultanos sobre el estado regulatorio para Argentina y otros mercados.",
+      "q2": "¿Tienen ficha técnica disponible?",
+      "a2": "Sí. La ficha técnica incluye perfil del pigmento, estabilidad en función de pH y temperatura, y condiciones de uso recomendadas. Disponible bajo solicitud.",
+      "q3": "¿Trabajan con pequeños volúmenes o escala piloto?",
+      "a3": "Sí, trabajamos desde escala piloto. Si estás evaluando el ingrediente para una formulación nueva, podemos enviarte una muestra y acompañarte en el proceso.",
+      "q4": "¿Los colorantes son estables en procesos con calor o pH ácido?",
+      "a4": "Las antocianinas son más estables en pH ácido (2–4), habitual en bebidas y productos fermentados. Para procesos con alta temperatura recomendamos consultar condiciones específicas con nuestro equipo técnico.",
+      "q5": "¿Pueden enviar muestras para evaluación?",
+      "a5": "Sí. Enviamos muestras para evaluación técnica en tu laboratorio o planta. Contactanos indicando tu aplicación objetivo y el volumen de prueba que necesitás."
     }
   },
   "footer": {

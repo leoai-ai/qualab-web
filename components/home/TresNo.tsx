@@ -16,14 +16,14 @@ export default function TresNo() {
   ];
 
   return (
-    <section className="py-24 bg-[#282625] relative overflow-hidden">
+    <section className="py-24 bg-[#F5F1EA] relative overflow-hidden">
       {/* Gradient mesh — tonos cálidos de la paleta */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse 50% 60% at 15% 50%, rgba(90,16,45,0.30) 0%, transparent 55%),
-            radial-gradient(ellipse 40% 50% at 85% 30%, rgba(195,131,53,0.12) 0%, transparent 50%)
+            radial-gradient(ellipse 50% 60% at 15% 50%, rgba(90,16,45,0.06) 0%, transparent 55%),
+            radial-gradient(ellipse 40% 50% at 85% 30%, rgba(195,131,53,0.08) 0%, transparent 50%)
           `,
         }}
       />
@@ -31,7 +31,7 @@ export default function TresNo() {
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `radial-gradient(circle, #ffffff 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #282625 1px, transparent 1px)`,
           backgroundSize: "32px 32px",
         }}
       />
@@ -44,7 +44,7 @@ export default function TresNo() {
             {t("eyebrow")}
             <span className="w-6 h-px bg-[#C38335]" />
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold leading-tight max-w-3xl mx-auto" style={{ color: "#282625" }}>
             {t("headline")}
           </h2>
         </div>
@@ -54,10 +54,9 @@ export default function TresNo() {
           {cards.map((c, i) => (
             <div
               key={i}
-              className="relative rounded-2xl p-8 overflow-hidden group hover:-translate-y-1 transition-all duration-300"
+              className="relative rounded-2xl p-8 overflow-hidden group hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm"
               style={{
-                background: "rgba(255,255,255,0.05)",
-                border: `1px solid ${c.border}40`,
+                border: `1px solid ${c.border}30`,
               }}
             >
               {/* Top accent bar */}
@@ -68,16 +67,16 @@ export default function TresNo() {
 
               {/* Label badge */}
               <span
-                className="inline-block text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full mb-5 text-white"
-                style={{ backgroundColor: c.bg + "30", border: `1px solid ${c.bg}60` }}
+                className="inline-block text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full mb-5"
+                style={{ backgroundColor: c.bg + "18", border: `1px solid ${c.bg}40`, color: c.bg }}
               >
                 {c.label}
               </span>
 
-              <h3 className="text-xl font-bold text-white mb-4 leading-snug">
+              <h3 className="text-xl font-bold mb-4 leading-snug" style={{ color: "#282625" }}>
                 {c.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "rgba(245,241,234,0.70)" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "rgba(40,38,37,0.65)" }}>
                 {c.body}
               </p>
 
@@ -94,7 +93,7 @@ export default function TresNo() {
 
         {/* Closing message */}
         <div className="mt-14 text-center max-w-2xl mx-auto">
-          <p className="text-base sm:text-lg font-semibold leading-relaxed italic" style={{ color: "rgba(245,241,234,0.90)" }}>
+          <p className="text-base sm:text-lg font-semibold leading-relaxed italic" style={{ color: "rgba(40,38,37,0.80)" }}>
             "{t("cierre")}"
           </p>
         </div>

@@ -9,6 +9,7 @@ export default function Footer() {
 
   const links = [
     { href: `/${locale}/nosotros`, label: nav("nosotros") },
+    { href: `/${locale}/colorantes`, label: nav("colorantes") },
     { href: `/${locale}/ingredientes`, label: nav("ingredientes") },
     { href: `/${locale}/contacto`, label: nav("contacto") },
   ];
@@ -25,7 +26,7 @@ export default function Footer() {
                 alt="Qualab"
                 width={130}
                 height={42}
-                className="h-10 w-auto object-contain brightness-0 invert"
+                className="h-10 w-auto object-contain"
               />
             </Link>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "rgba(245,241,234,0.65)" }}>

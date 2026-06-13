@@ -26,8 +26,18 @@ export default function Navbar() {
 
   const links = [
     { href: `/${locale}/nosotros`, label: t("nosotros") },
+    { href: `/${locale}/colorantes`, label: t("colorantes") },
     { href: `/${locale}/ingredientes`, label: t("ingredientes") },
   ];
+
+  // Páginas con hero claro → texto oscuro arriba. El resto (hero oscuro) → texto blanco.
+  const isLightHero =
+    pathname === `/${locale}` ||
+    pathname === `/${locale}/colorantes` ||
+    pathname === `/${locale}/ingredientes` ||
+    pathname === `/${locale}/ingredientes/polvo-piel-uva` ||
+    pathname === `/${locale}/ingredientes/aceite-pepita-uva`;
+  const darkText = scrolled || isLightHero;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -48,7 +58,7 @@ export default function Navbar() {
               alt="Qualab"
               width={220}
               height={72}
-              className={`h-16 w-auto object-contain transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
+              className="h-16 w-auto object-contain transition-all duration-300"
               priority
             />
           </Link>
@@ -59,7 +69,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-base font-medium px-3 py-1.5 rounded-full transition-all duration-200 hover:bg-[#5A102D] hover:text-white ${scrolled ? "text-gray-600" : "text-white/80"}`}
+                className={`text-base font-medium px-3 py-1.5 rounded-full transition-all duration-200 hover:bg-[#5A102D] hover:text-white ${darkText ? "text-gray-700" : "text-white/90"}`}
               >
                 {link.label}
               </Link>
@@ -67,7 +77,7 @@ export default function Navbar() {
             {/* Language switcher */}
             <Link
               href={localizedPath}
-              className={`text-xs font-semibold tracking-widest transition-colors uppercase ${scrolled ? "text-gray-400 hover:text-[#282625]" : "text-white/60 hover:text-white"}`}
+              className={`text-xs font-semibold tracking-widest transition-colors uppercase ${darkText ? "text-gray-400 hover:text-[#282625]" : "text-white/70 hover:text-white"}`}
             >
               {otherLocale}
             </Link>

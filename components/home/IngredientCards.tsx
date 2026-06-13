@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
-import SectionHeader from "@/components/shared/SectionHeader";
 
 const PHOTOS = {
-  colorante: "/Colorante_imagen.png",
-  aceite:    "https://images.unsplash.com/photo-1768689033119-c3ac1e437d20?w=900&q=80&auto=format&fit=crop",
-  polvo:     "/Polvo_uva.png",
+  colorante: "/Colorante_imagen.webp",
+  aceite:    "/ingredientes/aceite-prensado.jpg",
+  polvo:     "/Polvo_uva.webp",
 };
 
 export default function IngredientCards() {
@@ -14,19 +13,6 @@ export default function IngredientCards() {
   const locale = useLocale();
 
   const ingredients = [
-    {
-      key: "colorante",
-      href: `/${locale}/ingredientes/colorante-natural`,
-      name: t("colorante.name"),
-      desc: t("colorante.desc"),
-      tag: t("colorante.tag"),
-      featured: true,
-      photo: PHOTOS.colorante,
-      overlayFrom: "#3D0B1A",
-      overlayVia: "#6B1535",
-      accent: "#F4B8C8",
-      label: t("label_featured"),
-    },
     {
       key: "aceite",
       href: `/${locale}/ingredientes/aceite-pepita-uva`,
@@ -54,21 +40,29 @@ export default function IngredientCards() {
   ];
 
   return (
-    <section className="pt-6 pb-11 bg-[#F5F1EA] relative overflow-hidden">
+    <section className="pt-20 pb-20 bg-[#F5F1EA] relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <SectionHeader eyebrow={t("eyebrow")} headline={t("headline")} />
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "#C38335" }}>
+            <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
+            {t("eyebrow")}
+            <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-4" style={{ color: "#282625" }}>
+            {t("headline")}
+          </h2>
+          <p className="text-lg leading-relaxed" style={{ color: "rgba(40,38,37,0.65)" }}>
+            {t("body")}
+          </p>
         </div>
 
-        {/* Asymmetric editorial grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.65fr_1fr_1fr] gap-5">
+        {/* Editorial grid — 2 ingredientes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
           {ingredients.map((ing) => (
             <Link
               key={ing.key}
               href={ing.href}
-              className={`group relative rounded-3xl overflow-hidden flex flex-col ${
-                ing.featured ? "min-h-[500px]" : "min-h-[400px]"
-              }`}
+              className="group relative rounded-3xl overflow-hidden flex flex-col min-h-[420px]"
             >
               {/* Photo background */}
               <div
@@ -91,13 +85,6 @@ export default function IngredientCards() {
 
               {/* Subtle top tint */}
               <div className="absolute inset-0 bg-black/20" />
-
-              {/* Featured badge */}
-              {ing.featured && (
-                <span className="absolute top-5 left-5 z-10 text-[10px] font-bold tracking-widest uppercase bg-[#C38335] text-white px-3 py-1.5 rounded-full">
-                  {ing.tag}
-                </span>
-              )}
 
               {/* Bottom content */}
               <div className="relative z-10 mt-auto p-7">
@@ -124,11 +111,11 @@ export default function IngredientCards() {
           ))}
         </div>
 
-        <div className="mt-5 text-center">
+        <div className="mt-10 text-center">
           <Link
             href={`/${locale}/ingredientes`}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 text-sm font-semibold transition-colors hover:bg-[#5A102D] hover:text-white hover:border-[#5A102D]"
-            style={{ borderColor: "#282625", color: "#282625" }}
+            className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-white text-sm font-semibold shadow-lg transition-opacity hover:opacity-90"
+            style={{ backgroundColor: "#5A102D" }}
           >
             {t("ver_todos")} <ArrowRight size={14} />
           </Link>

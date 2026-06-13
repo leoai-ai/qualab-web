@@ -4,9 +4,12 @@ interface Props {
   body?: string;
   center?: boolean;
   light?: boolean;
+  /** nivel del encabezado (default "h2"). Usar "h1" en heros de página para SEO/accesibilidad. */
+  as?: "h1" | "h2";
 }
 
-export default function SectionHeader({ eyebrow, headline, body, center, light }: Props) {
+export default function SectionHeader({ eyebrow, headline, body, center, light, as = "h2" }: Props) {
+  const Heading = as;
   return (
     <div className={center ? "text-center" : ""}>
       {eyebrow && (
@@ -14,9 +17,9 @@ export default function SectionHeader({ eyebrow, headline, body, center, light }
           {eyebrow}
         </p>
       )}
-      <h2 className={`text-4xl sm:text-5xl font-bold leading-tight tracking-tight ${light ? "text-white" : "text-[#282625]"}`}>
+      <Heading className={`text-4xl sm:text-5xl font-bold leading-tight tracking-tight ${light ? "text-white" : "text-[#282625]"}`}>
         {headline}
-      </h2>
+      </Heading>
       {body && (
         <p className={`mt-5 text-lg sm:text-xl leading-relaxed max-w-2xl ${center ? "mx-auto" : ""} ${light ? "text-blue-100" : "text-gray-600"}`}>
           {body}

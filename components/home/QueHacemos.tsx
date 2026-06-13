@@ -151,7 +151,7 @@ export default function QueHacemos() {
               {t("cierre")}
             </p>
             <Link
-              href={`/${locale}/ingredientes/colorante-natural`}
+              href={`/${locale}/colorantes`}
               className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#C9A84C] text-white text-sm font-semibold hover:bg-amber-500 transition-colors whitespace-nowrap"
             >
               Ver colorante <ArrowRight size={15} />

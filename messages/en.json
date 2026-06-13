@@ -2,6 +2,7 @@
   "nav": {
     "nosotros": "About",
     "plataforma": "Platform",
+    "colorantes": "Colorants",
     "ingredientes": "Ingredients",
     "mercados": "Markets",
     "ciencia": "Science",
@@ -10,11 +11,17 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Viticultural biomass valorization platform",
-      "headline": "Natural colorants and functional ingredients from viticultural biomass",
-      "subheadline": "We transform vine by-products into natural-origin solutions for food, beverages and new industrial applications.",
-      "cta_primary": "Explore our ingredients",
-      "cta_secondary": "Let's discuss your project"
+      "eyebrow": "Natural colorants & functional ingredients",
+      "headline": "Natural colors and ingredients for the food and beverage industry",
+      "subheadline": "A complete range of plant-based natural colorants and the functional ingredients we develop from the vine. Natural-origin solutions, ready for your product.",
+      "cta_primary": "Colorants",
+      "cta_secondary": "Ingredients"
+    },
+    "gama": {
+      "eyebrow": "Our color range",
+      "headline": "A complete palette of natural colors",
+      "body": "From red to blue, from yellow to purple: a natural palette ready to replace synthetic colorants in your products.",
+      "cta": "See all colorants"
     },
     "stats": {
       "label1": "Global wine industry",
@@ -32,6 +39,7 @@
     "ingredients": {
       "eyebrow": "Our ingredients",
       "headline": "Natural actives from viticultural origin",
+      "body": "We transform vine by-products into natural-origin solutions for food, beverages and new industrial applications.",
       "colorante": {
         "name": "Natural Grape Colorant",
         "desc": "Stabilized anthocyanins from red grape skins. The red of the grape, ready for industry.",
@@ -97,20 +105,67 @@
       "eyebrow": "Partners & network"
     },
     "cta_final": {
-      "headline": "Are you exploring natural ingredients for new applications?",
+      "headline": "Are you looking for colors or exploring natural ingredients for new applications?",
       "body": "At Qualab we work with companies and partners interested in developing solutions of viticultural origin with scientific backing and industrial application.",
       "cta": "Let's discuss your project"
     }
+  },
+  "colorantes_page": {
+    "eyebrow": "Natural colorants",
+    "headline": "We create the shades your consumers are looking for",
+    "intro": "Natural color for beverages, food and nutrition.",
+    "hero_cta": "See colors",
+    "trend": "The industry is shifting to natural color: regulators are phasing out petroleum-based synthetic dyes and consumers are choosing clean labels.",
+    "trend_source": "Global clean label trend · FDA and international regulations",
+    "gallery_title": "Explore our colors",
+    "gallery_body": "Qualab brings to market natural colorants from plant extracts, designed for applications in food, beverages and nutraceuticals.",
+    "filtro_todos": "All",
+    "label_fuente": "Ingredients",
+    "label_apps": "Applications",
+    "ver_ficha": "View color sheet",
+    "m_pigmento": "Pigment",
+    "m_intensidad": "Color intensity",
+    "m_ph": "Stability / pH",
+    "m_dosis": "Typical dose",
+    "m_formato": "Format",
+    "m_vida": "Shelf life",
+    "m_certs": "Certifications",
+    "m_alternativa": "Natural alternative to",
+    "m_cta": "Request a sample",
+    "m_blend_note": "Made-to-measure color. Contact us for its technical sheet and certifications.",
+    "ventajas_title": "Crystal Technology",
+    "ventajas_intro": "A drying format that concentrates pigment into pure crystals, carrier-free. More color, more stable and with a cleaner label.",
+    "v1_title": "High concentration",
+    "v1_body": "Pigment concentrated into crystals: intense color at very low doses and higher yield per kilo.",
+    "v2_title": "Long shelf life",
+    "v2_body": "Up to 5 years of stability in dry storage, with no refrigeration or cold chain required.",
+    "v3_title": "Carrier-free",
+    "v3_body": "Pure color, no carrier agents. Cleaner label, less dust in handling and simpler formulation.",
+    "v4_title": "High solubility & clean label",
+    "v4_body": "Dissolves easily and is 100% natural origin, with certifications per market.",
+    "industrias_title": "Applications by industry",
+    "industrias_body": "We tailor color for the industries that need it most, by application and process.",
+    "i1": "Beverages",
+    "i2": "Confectionery & gummies",
+    "i3": "Dairy",
+    "i4": "Bakery",
+    "i5": "Ice cream",
+    "i6": "Snacks",
+    "cta_title": "Looking for color for your products?",
+    "cta_body": "Tell us your application, the shade you need and your process conditions. We'll help you find the ideal natural colorant and send you a sample.",
+    "cta_button": "Let's discuss your project"
   },
   "nosotros": {
     "hero": {
       "eyebrow": "Who we are",
       "headline": "An innovation platform, not just a supplier",
-      "body": "Qualab was born from the desire to transform a traditional industry like viticulture into a platform for innovation, health and sustainability."
+      "body": "Qualab was born from the desire to transform a traditional industry like viticulture into a platform for innovation, expanding its impact with natural ingredients of real-world application."
     },
     "proposito": {
       "eyebrow": "Our purpose",
       "headline": "Qualab exists to expand the impact that viticulture can generate from those resources and knowledge that have not yet expressed their full potential.",
+      "modelo_eyebrow": "In one phrase",
+      "modelo": "Qualab helps food and beverage companies adopt natural ingredients of viticultural origin that work.",
       "historia_title": "Our story",
       "historia_body": "Qualab was founded in 2018, within the world of viticulture, by Fernando Buscema, with the conviction that this industry could expand the impact it traditionally delivers. In its early years, the company focused on crop protection solutions. Over time, that path evolved toward developing natural ingredients. Today, Qualab connects concrete needs with viticultural ingredients that have real applications in food, beverages, functional cosmetics and preventive medicine. We remain part of the wine ecosystem — not seeking to replace it, but to complement it and expand its reach."
     },
@@ -142,7 +197,9 @@
     "hero": {
       "eyebrow": "Ingredients",
       "headline": "Natural actives from viticultural origin",
-      "body": "Bioactive ingredients obtained from grape biomass, with complete traceability from high-altitude Mendoza vineyards."
+      "subtitle": "Functional solutions that elevate the nutritional profile, color and flavor of your products.",
+      "body": "Boost your products with the essence of the Mendoza vine: our grape powder provides fiber for digestive health and powerful antioxidants (rich in polyphenols), while grape seed oil stands out for its excellent profile of healthy unsaturated fats (high in linoleic acid / omega-6).",
+      "body2": "A natural synergy that raises the nutritional value of your creations, adding anti-inflammatory properties and a unique sensory appeal."
     },
     "colorante": {
       "tag": "Featured",
@@ -207,12 +264,12 @@
       "spec_vite": "~20–50 mg / 100 g",
       "spec_source": "Grape seeds (Vitis vinifera)",
       "spec_origin": "Mendoza, Argentina",
-      "cta": "Request sample / technical sheet"
+      "cta": "Let's discuss your project"
     },
     "polvo": {
-      "name": "Grape Skin Fiber",
-      "headline": "Grape skin fiber: 55% total dietary fiber with documented antioxidant activity",
-      "intro": "Vegetable fiber obtained from Mendoza red grape skins. 55% total dietary fiber, accompanied by 36.96 mg/g of polyphenols and 1,173 mg of anthocyanins per 100 g. Delivers nutritional functionality and bioactivity in bakery, granola and chocolate formulations.",
+      "name": "Grape Skin Powder",
+      "headline": "Grape skin powder: 55% total dietary fiber with documented antioxidant activity",
+      "intro": "Powder obtained from Mendoza red grape skins. 55% total dietary fiber, accompanied by 36.96 mg/g of polyphenols and 1,173 mg of anthocyanins per 100 g. Delivers nutritional functionality and bioactivity in bakery, granola and chocolate formulations.",
       "origen_title": "Origin",
       "origen_body": "Red grape skins separated in the winemaking process in Mendoza, Argentina. Dehydrated and micronized (≤290 µm) to preserve active compounds. RNPA 13-063537 / RNE 13-006690 registered.",
       "compuesto_title": "Active compound",
@@ -235,13 +292,15 @@
       "spec_gluten": "< 10 ppm",
       "spec_vegano": "Vegan-friendly",
       "spec_origin": "Mendoza, Argentina",
-      "cta": "Request sample / technical sheet"
+      "cta": "Let's discuss your project"
     }
   },
   "contacto": {
     "eyebrow": "Contact",
-    "headline": "Request a sample",
-    "body": "If you are exploring natural ingredients, industrial applications or new ways to valorize viticultural biomass, we can talk. Qualab works with companies, partners and institutions interested in developing solutions of viticultural origin with scientific backing and real application.",
+    "headline": "Let's talk about your next development",
+    "body": "Whether you're looking to innovate with functional ingredients, integrate plant-based natural colorants, or discover new ways to valorize viticultural biomass, we're here to help you overcome your formulation challenges.",
+    "body2": "At Qualab we work side by side with companies and institutions interested in co-creating innovative solutions, offering technical support backed by science and real industrial application.",
+    "body3": "Tell us what problem you're trying to solve and let's see how we can boost your products.",
     "form": {
       "nombre": "Full name",
       "empresa": "Company / institution",
@@ -263,6 +322,19 @@
       "email": "informes@qualab.co",
       "ubicacion": "Mendoza, Argentina",
       "linkedin": "LinkedIn"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Are the colorants suitable for food use?",
+      "a1": "Yes. They are approved under FDA 21 CFR 73.260 (USA) and comply with the NATCOL Code of Practice (EU). They also hold Kosher OU, Halal and Gluten Free certifications. Contact us about regulatory status for Argentina and other markets.",
+      "q2": "Is a technical datasheet available?",
+      "a2": "Yes. The technical datasheet includes the pigment profile, pH and temperature stability, and recommended usage conditions. Available upon request.",
+      "q3": "Do you work with small volumes or pilot scale?",
+      "a3": "Yes, we work from pilot scale. If you are evaluating the ingredient for a new formulation, we can send a sample and support you through the process.",
+      "q4": "Are the colorants stable in heat or acidic pH processes?",
+      "a4": "Anthocyanins are most stable at acidic pH (2–4), the typical range for beverages and fermented products. For high-temperature processes, we recommend consulting our technical team for specific conditions.",
+      "q5": "Can you send samples for evaluation?",
+      "a5": "Yes. We send samples for technical evaluation at your laboratory or plant. Contact us indicating your target application and the test volume you need."
     }
   },
   "footer": {

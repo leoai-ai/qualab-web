@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Mail, MapPin, Send } from "lucide-react";
+import FaqSection from "@/components/ingredientes/FaqSection";
 
 export default function ContactoPage() {
   const t = useTranslations("contacto");
@@ -15,6 +16,7 @@ export default function ContactoPage() {
     email: "",
     tipo: "",
     mensaje: "",
+    website: "", // honeypot anti-spam
   });
 
   const tipoOptions = [f("tipo_1"), f("tipo_2"), f("tipo_3"), f("tipo_4"), f("tipo_5"), f("tipo_6")];
@@ -34,7 +36,7 @@ export default function ContactoPage() {
       });
       if (res.ok) {
         setStatus("success");
-        setForm({ nombre: "", empresa: "", email: "", tipo: "", mensaje: "" });
+        setForm({ nombre: "", empresa: "", email: "", tipo: "", mensaje: "", website: "" });
       } else {
         setStatus("error");
       }
@@ -50,8 +52,12 @@ export default function ContactoPage() {
           <p className="text-xs font-semibold tracking-widest uppercase text-[#C38335] mb-3">
             {t("eyebrow")}
           </p>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">{t("headline")}</h1>
-          <p className="text-blue-200 text-lg">{t("body")}</p>
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] mb-6 max-w-5xl">{t("headline")}</h1>
+          <div className="max-w-6xl space-y-4">
+            <p className="text-lg sm:text-xl leading-relaxed text-blue-100">{t("body")}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-blue-300">{t("body2")}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-blue-300">{t("body3")}</p>
+          </div>
         </div>
       </section>
 
@@ -67,6 +73,17 @@ export default function ContactoPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* Honeypot anti-spam: oculto para usuarios, visible para bots */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={form.website}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute left-[-9999px] h-0 w-0 opacity-0"
+                  />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -186,6 +203,19 @@ export default function ContactoPage() {
           </div>
         </div>
       </section>
+
+      {/* Preguntas frecuentes */}
+      <FaqSection
+        title={t("faq.title")}
+        accentColor="#5A102D"
+        items={[
+          { q: t("faq.q1"), a: t("faq.a1") },
+          { q: t("faq.q2"), a: t("faq.a2") },
+          { q: t("faq.q3"), a: t("faq.a3") },
+          { q: t("faq.q4"), a: t("faq.a4") },
+          { q: t("faq.q5"), a: t("faq.a5") },
+        ]}
+      />
     </>
   );
 }

@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 
 export default function StatsStrip() {
   const t = useTranslations("home.stats");
+  const tp = useTranslations("home.problem");
 
   const stats = [
     { value: t("value1"), label: t("label1") },
@@ -10,6 +11,18 @@ export default function StatsStrip() {
   ];
 
   return (
+    <>
+    {/* Encabezado del bloque — coherente con los demás */}
+    <div className="bg-[#F5F1EA] pt-14 pb-9">
+      <div className="text-center max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase" style={{ color: "#C38335" }}>
+          <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
+          {tp("eyebrow")}
+          <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
+        </p>
+      </div>
+    </div>
+
     <section className="relative bg-[#5A102D] py-8 overflow-hidden">
       {/* Dot grid texture */}
       <div
@@ -55,5 +68,6 @@ export default function StatsStrip() {
         </svg>
       </div>
     </section>
+    </>
   );
 }

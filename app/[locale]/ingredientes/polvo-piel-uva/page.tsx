@@ -10,12 +10,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const isES = locale === "es";
   return {
-    title: isES ? "Fibra de Piel de Uva" : "Grape Skin Fiber",
+    title: isES ? "Piel de uva en polvo" : "Grape Skin Powder",
     description: isES
-      ? "Fibra vegetal de piel de uva tinta. 55% de fibra dietaria, 1.173 mg de antocianinas y 36,96 mg/g de polifenoles por 100 g. Origen Mendoza, Argentina."
-      : "Vegetable fiber from red grape skins. 55% dietary fiber, 1,173 mg of anthocyanins and 36.96 mg/g of polyphenols per 100 g. Origin Mendoza, Argentina.",
+      ? "Polvo de piel de uva tinta. 55% de fibra dietaria, 1.173 mg de antocianinas y 36,96 mg/g de polifenoles por 100 g. Origen Mendoza, Argentina."
+      : "Powder from red grape skins. 55% dietary fiber, 1,173 mg of anthocyanins and 36.96 mg/g of polyphenols per 100 g. Origin Mendoza, Argentina.",
     openGraph: {
-      title: isES ? "Fibra de Piel de Uva | Qualab" : "Grape Skin Fiber | Qualab",
+      title: isES ? "Piel de uva en polvo | Qualab" : "Grape Skin Powder | Qualab",
       description: isES
         ? "55% de fibra dietaria total, rica en antocianinas y polifenoles. Para horneados, granolas, chocolates y suplementos."
         : "55% total dietary fiber, rich in anthocyanins and polyphenols. For baked goods, granolas, chocolates and supplements.",
@@ -59,7 +59,12 @@ export default function PolvoPielPage() {
       cta={t("cta")}
       contactHref={`/${locale}/contacto`}
       accentColor="#5A102D"
-      heroBg="/productos_ingredientes.png"
+      heroBg="/polvo-uva-hero.jpg"
+      heroLight
+      appsBg="/ingredientes/polvo-usos.webp"
+      appsBgPosition="center bottom"
+      appsBgOpacity={0.55}
+      whyDark
     />
   );
 }

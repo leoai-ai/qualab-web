@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import SectionHeader from "@/components/shared/SectionHeader";
 
 const R = 88;
 const CX = 110;
@@ -50,11 +49,14 @@ export default function ProblemBlock() {
     <section className="pt-0 pb-10 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <SectionHeader
-            eyebrow={t("eyebrow")}
-            headline={t("headline")}
-            body={t("body")}
-          />
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold leading-tight mb-5" style={{ color: "#282625" }}>
+              {t("headline")}
+            </h2>
+            <p className="text-lg leading-relaxed" style={{ color: "rgba(40,38,37,0.70)" }}>
+              {t("body")}
+            </p>
+          </div>
 
           <div ref={chartRef} className="flex flex-col items-center lg:items-center gap-8">
 
@@ -133,7 +135,7 @@ export default function ProblemBlock() {
                   <span className="text-sm font-bold text-white">25%</span>
                 </div>
                 <div>
-                  <p className="text-base font-semibold text-[#282625]">Jugo → Vino</p>
+                  <p className="text-base font-semibold text-[#282625]">Vino</p>
                   <p className="text-sm text-gray-500">La base del negocio vitivinícola</p>
                 </div>
               </div>

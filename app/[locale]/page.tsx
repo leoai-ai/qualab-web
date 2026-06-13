@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import MarqueeBanner from "@/components/home/MarqueeBanner";
 import Hero from "@/components/home/Hero";
+import ColorGama from "@/components/home/ColorGama";
 import StatsStrip from "@/components/home/StatsStrip";
 import ProblemBlock from "@/components/home/ProblemBlock";
 import IngredientCards from "@/components/home/IngredientCards";
-import TresNo from "@/components/home/TresNo";
 import CtaFinal from "@/components/home/CtaFinal";
 
 export async function generateMetadata({
@@ -39,11 +38,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ColorGama />
+      <IngredientCards />
       <StatsStrip />
       <ProblemBlock />
-      <IngredientCards />
-      <MarqueeBanner />
-      <TresNo />
       <CtaFinal />
     </>
   );

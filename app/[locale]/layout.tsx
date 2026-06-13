@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
@@ -14,6 +16,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://qualab.co"),
   title: {
     template: "%s | Qualab",
     default: "Qualab — Colorantes naturales e ingredientes de uva",
@@ -51,6 +54,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
