@@ -45,7 +45,7 @@ export default function NosotrosPage() {
     <>
       {/* Hero */}
       <section className="pt-16 bg-[#5A102D] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
           <SectionHeader
             as="h1"
             eyebrow={t("hero.eyebrow")}

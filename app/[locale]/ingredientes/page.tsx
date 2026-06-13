@@ -52,7 +52,7 @@ export default function IngredientesPage() {
   return (
     <>
       {/* ── HERO con foto de fondo (estilo Colorantes) ── */}
-      <section className="relative min-h-[60vh] flex items-start overflow-hidden bg-[#F5F1EA]">
+      <section className="relative min-h-[52vh] sm:min-h-[60vh] flex items-start overflow-hidden bg-[#F5F1EA]">
         {/* Foto de fondo */}
         <div
           className="absolute inset-0 bg-cover"
@@ -74,7 +74,7 @@ export default function IngredientesPage() {
               "linear-gradient(95deg, rgba(245,241,234,0.95) 0%, rgba(245,241,234,0.72) 30%, rgba(245,241,234,0.22) 54%, transparent 72%)",
           }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
           <div className="max-w-xl">
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: "#C38335" }}>
               {t("hero.eyebrow")}

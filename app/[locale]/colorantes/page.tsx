@@ -53,7 +53,7 @@ export default function ColorantesPage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-[68vh] flex items-start overflow-hidden bg-[#F5F1EA]">
+      <section className="relative min-h-[58vh] sm:min-h-[68vh] flex items-start overflow-hidden bg-[#F5F1EA]">
         {/* Foto de fondo */}
         <div
           className="absolute inset-0 bg-cover"
@@ -76,7 +76,7 @@ export default function ColorantesPage() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
           <div className="max-w-2xl">
             <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "#C38335" }}>
               <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />

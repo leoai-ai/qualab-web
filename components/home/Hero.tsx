@@ -81,7 +81,7 @@ export default function Hero() {
       />
 
       {/* ── CONTENIDO (zona aireada superior) ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
         <div className="max-w-2xl">
           <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: "#C38335" }}>
             <span className="w-7 h-px" style={{ backgroundColor: "#C38335" }} />

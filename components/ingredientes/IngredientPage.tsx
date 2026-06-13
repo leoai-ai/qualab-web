@@ -130,7 +130,7 @@ export default function IngredientPage({
             />
           </>
         )}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" style={{ color: heroLight ? "#282625" : "#ffffff" }}>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20" style={{ color: heroLight ? "#282625" : "#ffffff" }}>
           <div className="max-w-2xl">
             {tag && (
               <span
@@ -208,8 +208,8 @@ export default function IngredientPage({
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: appsBg ? "#F5F1EA" : "#ffffff" }}>
         {appsBg && (
           <>
-            <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url('${appsBg}')`, backgroundPosition: appsBgPosition }} />
-            <div className="absolute inset-0" style={{ background: `rgba(245,241,234,${appsBgOpacity})` }} />
+            <div className="absolute inset-0 bg-cover hidden sm:block" style={{ backgroundImage: `url('${appsBg}')`, backgroundPosition: appsBgPosition }} />
+            <div className="absolute inset-0 hidden sm:block" style={{ background: `rgba(245,241,234,${appsBgOpacity})` }} />
           </>
         )}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
