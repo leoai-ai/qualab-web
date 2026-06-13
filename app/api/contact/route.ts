@@ -3,6 +3,11 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Remitente configurable por variable de entorno. Cuando el dominio qualab.co
+// esté verificado en Resend, basta con setear CONTACT_FROM en Vercel (sin redeploy de código).
+// Ej: CONTACT_FROM="Qualab Web <web@qualab.co>"
+const CONTACT_FROM = process.env.CONTACT_FROM || "Qualab Web <onboarding@resend.dev>";
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Escapa HTML para evitar inyección de markup en el email que recibe Qualab.
@@ -46,7 +51,7 @@ export async function POST(req: NextRequest) {
     const sMensaje = escapeHtml(cap(mensaje, 4000)).replace(/\n/g, "<br>");
 
     const { error } = await resend.emails.send({
-      from: "Qualab Web <onboarding@resend.dev>",
+      from: CONTACT_FROM,
       to: "roque.tenerini@qualab.co",
       replyTo: emailPlain,
       subject: `Nueva consulta: ${tipoPlain || "Contacto"} — ${nombrePlain}`,
