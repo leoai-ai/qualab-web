@@ -79,7 +79,6 @@ export default function ColorantesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
           <div className="max-w-2xl">
             <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "#C38335" }}>
-              <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
               {t("eyebrow")}
             </p>
             <h1
@@ -95,7 +94,7 @@ export default function ColorantesPage() {
             >
               {t("headline")}
             </h1>
-            <p className="text-lg sm:text-xl leading-relaxed max-w-xl mb-8" style={{ color: "#282625" }}>
+            <p className="text-lg sm:text-xl leading-relaxed max-w-xl mb-8" style={{ color: "#000000" }}>
               {t("intro")}
             </p>
             <a
@@ -118,6 +117,46 @@ export default function ColorantesPage() {
           <p className="mt-4 text-sm" style={{ color: "rgba(245,241,234,0.55)" }}>
             {t("trend_source")}
           </p>
+        </div>
+      </section>
+
+      {/* ── VENTAJAS — Tecnología Crystal ── */}
+      <section className="relative py-20 overflow-hidden bg-[#F5F1EA]">
+        {/* Foto de fondo */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/crystal-bg.jpg')" }}
+        />
+        {/* Velo claro para legibilidad */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(180deg, rgba(245,241,234,0.92) 0%, rgba(245,241,234,0.72) 45%, rgba(245,241,234,0.80) 100%)" }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "#C38335" }}>
+              <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
+              Crystal
+              <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "#282625" }}>
+              {t("ventajas_title")}
+            </h2>
+            <p className="text-lg sm:text-xl leading-relaxed" style={{ color: "rgba(40,38,37,0.82)" }}>
+              {t("ventajas_intro")}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {ventajas.map(({ Icon, key }) => (
+              <div key={key} className="bg-white rounded-2xl p-7 shadow-sm">
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: "#5A102D15" }}>
+                  <Icon size={22} style={{ color: "#5A102D" }} />
+                </div>
+                <h3 className="font-bold mb-2" style={{ color: "#282625" }}>{t(`${key}_title`)}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "rgba(40,38,37,0.65)" }}>{t(`${key}_body`)}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -155,48 +194,8 @@ export default function ColorantesPage() {
         </div>
       </section>
 
-      {/* ── VENTAJAS — Tecnología Crystal ── */}
-      <section className="relative py-20 overflow-hidden bg-[#F5F1EA]">
-        {/* Foto de fondo */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/crystal-bg.jpg')" }}
-        />
-        {/* Velo claro para legibilidad */}
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(180deg, rgba(245,241,234,0.92) 0%, rgba(245,241,234,0.72) 45%, rgba(245,241,234,0.80) 100%)" }}
-        />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "#C38335" }}>
-              <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
-              Crystal
-              <span className="w-6 h-px" style={{ backgroundColor: "#C38335" }} />
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "#282625" }}>
-              {t("ventajas_title")}
-            </h2>
-            <p className="text-base leading-relaxed" style={{ color: "rgba(40,38,37,0.65)" }}>
-              {t("ventajas_intro")}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ventajas.map(({ Icon, key }) => (
-              <div key={key} className="bg-white rounded-2xl p-7 shadow-sm">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: "#5A102D15" }}>
-                  <Icon size={22} style={{ color: "#5A102D" }} />
-                </div>
-                <h3 className="font-bold mb-2" style={{ color: "#282625" }}>{t(`${key}_title`)}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "rgba(40,38,37,0.65)" }}>{t(`${key}_body`)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── INDUSTRIAS ── */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#F5F1EA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: "#282625" }}>{t("industrias_title")}</h2>
@@ -206,8 +205,8 @@ export default function ColorantesPage() {
             {industrias.map(({ key, Icon, ids }) => (
               <div
                 key={key}
-                className="group relative rounded-2xl min-h-[150px] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg cursor-default"
-                style={{ backgroundColor: "#F5F1EA" }}
+                className="group relative rounded-2xl min-h-[150px] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg cursor-default border border-gray-100"
+                style={{ backgroundColor: "#ffffff" }}
               >
                 {/* Vista por defecto: ícono + nombre */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 transition-opacity duration-300 group-hover:opacity-0">
@@ -238,7 +237,7 @@ export default function ColorantesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 text-center" style={{ backgroundColor: "#F5F1EA" }}>
+      <section className="py-20 text-center bg-white">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-5" style={{ color: "#282625" }}>{t("cta_title")}</h2>
           <p className="text-base leading-relaxed mb-8" style={{ color: "rgba(40,38,37,0.65)" }}>{t("cta_body")}</p>

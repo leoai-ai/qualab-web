@@ -91,7 +91,7 @@ export default function IngredientesPage() {
             >
               {t("hero.headline")}
             </h1>
-            <p className="text-lg sm:text-xl leading-relaxed max-w-lg" style={{ color: "#282625" }}>
+            <p className="text-lg sm:text-xl leading-relaxed max-w-lg" style={{ color: "#000000" }}>
               {t("hero.subtitle")}
             </p>
           </div>
