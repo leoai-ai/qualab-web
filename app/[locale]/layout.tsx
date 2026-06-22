@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FloatingCTA from "@/components/layout/FloatingCTA";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +54,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <FloatingCTA />
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />
