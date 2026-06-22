@@ -55,8 +55,8 @@ export default function IngredientesPage() {
       <section className="relative min-h-[52vh] sm:min-h-[60vh] flex items-start overflow-hidden bg-[#F5F1EA]">
         {/* Foto de fondo */}
         <div
-          className="absolute inset-0 bg-cover"
-          style={{ backgroundImage: "url('/ingredientes-fondo.webp')", backgroundPosition: "center right" }}
+          className="absolute inset-0 bg-cover bg-left md:bg-right"
+          style={{ backgroundImage: "url('/ingredientes-fondo.webp')" }}
         />
         {/* Velo claro superior */}
         <div

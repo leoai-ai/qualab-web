@@ -17,10 +17,19 @@ export default function FloatingCTA() {
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setShown(window.scrollY > 400);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    // En mobile (<768px) se muestra ni bien entrás; en desktop, tras scrollear ~400px
+    // (arriba ya está el "Hablemos" del navbar).
+    const update = () => {
+      const isMobile = window.innerWidth < 768;
+      setShown(isMobile || window.scrollY > 400);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   // No mostrarlo en la página de contacto (ya estás ahí)
