@@ -61,6 +61,7 @@ export default function PolvoPielPage() {
       accentColor="#5A102D"
       heroBg="/polvo-uva-hero.jpg"
       heroLight
+      heroBgHideOnMobile
       appsBg="/ingredientes/polvo-usos.webp"
       appsBgPosition="center bottom"
       appsBgOpacity={0.55}

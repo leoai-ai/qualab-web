@@ -41,6 +41,8 @@ interface IngredientPageProps {
   heroBgPosition?: string;
   /** tamaño de la foto del hero (background-size), default "contain". Ej: "80%" para achicarla */
   heroBgSize?: string;
+  /** oculta la foto del hero en celular (<768px) para que no estorbe la lectura del texto */
+  heroBgHideOnMobile?: boolean;
   /** hero claro (fondo crema + texto oscuro) para fotos de fondo claro */
   heroLight?: boolean;
   /** foto de fondo opcional para el bloque de Aplicaciones */
@@ -100,6 +102,7 @@ export default function IngredientPage({
   heroLight,
   heroBgPosition = "right center",
   heroBgSize = "contain",
+  heroBgHideOnMobile,
   appsBg,
   appsBgPosition = "center",
   appsBgOpacity = 0.86,
@@ -112,7 +115,7 @@ export default function IngredientPage({
         {heroBg && (
           <>
             <div
-              className="absolute inset-0"
+              className={`absolute inset-0 ${heroBgHideOnMobile ? "hidden md:block" : ""}`}
               style={{
                 backgroundImage: `url(${heroBg})`,
                 backgroundSize: heroBgSize,
