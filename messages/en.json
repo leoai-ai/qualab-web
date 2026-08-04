@@ -34,7 +34,13 @@
     "problem": {
       "eyebrow": "An untapped biological wealth",
       "headline": "Viticulture generates much more than wine.",
-      "body": "Grape skins, seeds, and stems concentrate the most biologically potent compounds of the entire plant: anthocyanins, polyphenols, dietary fiber, and essential fatty acids. Qualab brings that wealth to new industries — functional foods, beverages, cosmetics, and dietary supplements — expanding the impact of every harvest."
+      "body": "Grape skins, seeds, and stems concentrate the most biologically potent compounds of the entire plant: anthocyanins, polyphenols, dietary fiber, and essential fatty acids. Qualab brings that wealth to new industries — functional foods, beverages, cosmetics, and dietary supplements — expanding the impact of every harvest.",
+      "donut_title": "The true fruit of the vine",
+      "vino": "Wine",
+      "vino_desc": "The foundation of the wine business",
+      "subproductos": "Skins · Seeds · Canes",
+      "subproductos_desc": "Biological wealth that Qualab valorizes",
+      "biomasa": "biomass"
     },
     "ingredients": {
       "eyebrow": "Our ingredients",

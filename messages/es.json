@@ -34,7 +34,13 @@
     "problem": {
       "eyebrow": "Una riqueza biológica sin explotar",
       "headline": "La vitivinicultura genera mucho más que vino.",
-      "body": "Las pieles, semillas y sarmientos concentran los compuestos biológicamente más potentes de toda la planta: antocianinas, polifenoles, fibras y ácidos grasos esenciales. Qualab lleva esa riqueza a nuevas industrias — alimentos funcionales, bebidas, cosméticos y suplementos — ampliando el impacto de cada cosecha."
+      "body": "Las pieles, semillas y sarmientos concentran los compuestos biológicamente más potentes de toda la planta: antocianinas, polifenoles, fibras y ácidos grasos esenciales. Qualab lleva esa riqueza a nuevas industrias — alimentos funcionales, bebidas, cosméticos y suplementos — ampliando el impacto de cada cosecha.",
+      "donut_title": "El verdadero fruto de la vid",
+      "vino": "Vino",
+      "vino_desc": "La base del negocio vitivinícola",
+      "subproductos": "Pieles · Semillas · Sarmientos",
+      "subproductos_desc": "Riqueza biológica que Qualab valoriza",
+      "biomasa": "biomasa"
     },
     "ingredients": {
       "eyebrow": "Nuestros ingredientes",

@@ -47,7 +47,7 @@ export default function ProblemBlock() {
 
   // Center label reacts to hover
   const centerValue = hovered === "vino" ? 25 : hovered === "sub" ? 75 : count;
-  const centerLabel = hovered === "vino" ? "vino" : "biomasa";
+  const centerLabel = hovered === "vino" ? t("vino") : t("biomasa");
   const centerColor = hovered === "vino" ? "#5A102D" : "#596943";
 
   return (
@@ -113,14 +113,14 @@ export default function ProblemBlock() {
             </div>
 
             <div className="flex-1 w-full">
-              <p className="text-lg font-bold mb-4" style={{ color: "#282625" }}>El verdadero fruto de la vid</p>
+              <p className="text-lg font-bold mb-4" style={{ color: "#282625" }}>{t("donut_title")}</p>
               <button
                 type="button"
                 onMouseEnter={() => setHovered("vino")} onMouseLeave={() => setHovered(null)}
                 className="w-full text-left flex items-center gap-3 mb-3"
               >
                 <span className="w-10 h-10 rounded-lg bg-[#5A102D] flex items-center justify-center shrink-0 text-xs font-bold text-white">25%</span>
-                <span><span className="block text-sm font-semibold text-[#282625]">Vino</span><span className="block text-xs text-gray-500">La base del negocio vitivinícola</span></span>
+                <span><span className="block text-sm font-semibold text-[#282625]">{t("vino")}</span><span className="block text-xs text-gray-500">{t("vino_desc")}</span></span>
               </button>
               <button
                 type="button"
@@ -128,7 +128,7 @@ export default function ProblemBlock() {
                 className="w-full text-left flex items-center gap-3"
               >
                 <span className="w-10 h-10 rounded-lg bg-[#596943] flex items-center justify-center shrink-0 text-xs font-bold text-white">75%</span>
-                <span><span className="block text-sm font-semibold text-[#596943]">Pieles · Semillas · Sarmientos</span><span className="block text-xs text-gray-500">Riqueza biológica que Qualab valoriza</span></span>
+                <span><span className="block text-sm font-semibold text-[#596943]">{t("subproductos")}</span><span className="block text-xs text-gray-500">{t("subproductos_desc")}</span></span>
               </button>
             </div>
           </div>
