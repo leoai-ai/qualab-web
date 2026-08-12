@@ -28,15 +28,15 @@ type Loc = { es: string; en: string };
 type Palette = { name: Loc; hex: string; img: string; colorId: string };
 
 const PALETTE: Palette[] = [
-  { name: { es: "Púrpura Uva", en: "Grape Purple" }, hex: "#6A1F74", img: "purpura-uva", colorId: "purpura-uva" },
-  { name: { es: "Púrpura Batata", en: "Sweet Potato Purple" }, hex: "#6E2585", img: "purpura-batata", colorId: "purpura-batata" },
-  { name: { es: "Rojo Rábano", en: "Radish Red" }, hex: "#DA291C", img: "rojo-rabano", colorId: "rojo-rabano" },
-  { name: { es: "Naranja RT", en: "Orange RT" }, hex: "#FF6900", img: "naranja-rt", colorId: "naranja" },
-  { name: { es: "Amarillo T", en: "Turmeric Yellow" }, hex: "#FFC72C", img: "amarillo-t", colorId: "amarillo-curcuma" },
-  { name: { es: "Azul Espirulina", en: "Spirulina Blue" }, hex: "#00A3E0", img: "azul-espirulina", colorId: "azul-spirulina" },
-  { name: { es: "Púrpura Zanahoria", en: "Carrot Purple" }, hex: "#9A2D7A", img: "purpura-zanahoria", colorId: "zanahoria-purpura" },
-  { name: { es: "Rojo Zanahoria", en: "Carrot Red" }, hex: "#D81E34", img: "rojo-zanahoria", colorId: "zanahoria-roja" },
-  { name: { es: "Marrón Zanahoria", en: "Carrot Brown" }, hex: "#8B4720", img: "marron-zanahoria", colorId: "marron-zanahoria" },
+  { name: { es: "Púrpura Uva", en: "Grape Purple" }, hex: "#6A1F74", img: "purpurauva", colorId: "purpura-uva" },
+  { name: { es: "Púrpura Batata", en: "Sweet Potato Purple" }, hex: "#6E2585", img: "purpuretabatata", colorId: "purpura-batata" },
+  { name: { es: "Rojo Rábano", en: "Radish Red" }, hex: "#DA291C", img: "rojorabano", colorId: "rojo-rabano" },
+  { name: { es: "Naranja RT", en: "Orange RT" }, hex: "#FF6900", img: "naranajRT", colorId: "naranja" },
+  { name: { es: "Amarillo T", en: "Turmeric Yellow" }, hex: "#FFC72C", img: "amarrilloT", colorId: "amarillo-curcuma" },
+  { name: { es: "Azul Espirulina", en: "Spirulina Blue" }, hex: "#00A3E0", img: "azul", colorId: "azul-spirulina" },
+  { name: { es: "Púrpura Zanahoria", en: "Carrot Purple" }, hex: "#9A2D7A", img: "purpurazanahoria", colorId: "zanahoria-purpura" },
+  { name: { es: "Rojo Zanahoria", en: "Carrot Red" }, hex: "#D81E34", img: "rojozanahoria", colorId: "zanahoria-roja" },
+  { name: { es: "Marrón Zanahoria", en: "Carrot Brown" }, hex: "#8B4720", img: "marronzanahoria", colorId: "marron-zanahoria" },
 ];
 
 const BENEFITS: { icon: React.ElementType; label: Loc }[] = [

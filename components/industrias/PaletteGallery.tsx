@@ -67,10 +67,10 @@ export default function PaletteGallery({ lang, contactHref, items }: Props) {
               <div
                 className="w-full rounded-2xl overflow-hidden"
                 style={{
-                  aspectRatio: "6 / 5",
+                  aspectRatio: "4 / 3",
                   backgroundColor: "#F6E8D9",
-                  backgroundImage: `url('/industrias/paleta/${p.img}.jpg')`,
-                  backgroundSize: "contain",
+                  backgroundImage: `url('/industrias/${p.img}.jpg')`,
+                  backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                   boxShadow: isActive
