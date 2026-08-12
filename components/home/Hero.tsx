@@ -83,7 +83,16 @@ export default function Hero() {
       {/* ── CONTENIDO (zona aireada superior) ── */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
         <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.7rem] font-bold leading-[1.07] tracking-tight mb-6" style={{ color: "#282625" }}>
+          <h1
+            className="text-4xl sm:text-5xl lg:text-[3.7rem] font-bold leading-[1.07] tracking-tight mb-6"
+            style={{
+              backgroundImage: "linear-gradient(100deg, #2B0920 0%, #5A102D 45%, #932142 72%, #C38335 100%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
+              width: "fit-content",
+            }}
+          >
             {t("headline")}
           </h1>
 

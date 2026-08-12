@@ -43,7 +43,7 @@ export default function ColorantesPage() {
   const colorById = Object.fromEntries(COLORANTES.map((c) => [c.id, c]));
   const industrias = [
     { key: "i1", Icon: CupSoda, ids: ["rojo-rabano", "naranja", "amarillo-curcuma", "azul-spirulina", "purpura-uva"] },
-    { key: "i2", Icon: Candy, ids: ["rojo-rabano", "naranja", "amarillo-curcuma", "butterfly-pea", "magenta"] },
+    { key: "i2", Icon: Candy, ids: ["rojo-rabano", "naranja", "amarillo-curcuma", "butterfly-pea", "magenta"], href: `/${locale}/industrias/golosinas-confiteria` },
     { key: "i3", Icon: Milk, ids: ["rojo-remolacha", "rosa", "amarillo-cartamo", "purpura-batata"] },
     { key: "i4", Icon: Croissant, ids: ["amarillo-curcuma", "amarillo-cartamo", "marron-zanahoria", "rojo-remolacha"] },
     { key: "i5", Icon: IceCreamCone, ids: ["rosa", "purpura-batata", "azul-spirulina", "butterfly-pea", "magenta"] },
@@ -202,36 +202,45 @@ export default function ColorantesPage() {
             <p className="text-base leading-relaxed" style={{ color: "rgba(40,38,37,0.65)" }}>{t("industrias_body")}</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {industrias.map(({ key, Icon, ids }) => (
-              <div
-                key={key}
-                className="group relative rounded-2xl min-h-[150px] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg cursor-default border border-gray-100"
-                style={{ backgroundColor: "#ffffff" }}
-              >
-                {/* Vista por defecto: ícono + nombre */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 transition-opacity duration-300 group-hover:opacity-0">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#5A102D15" }}>
-                    <Icon size={24} style={{ color: "#5A102D" }} />
+            {industrias.map(({ key, Icon, ids, href }) => {
+              const cardClass = `group relative block rounded-2xl min-h-[150px] overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg border border-gray-100 ${href ? "cursor-pointer" : "cursor-default"}`;
+              const inner = (
+                <>
+                  {/* Vista por defecto: ícono + nombre */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 transition-opacity duration-300 group-hover:opacity-0">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#5A102D15" }}>
+                      <Icon size={24} style={{ color: "#5A102D" }} />
+                    </div>
+                    <span className="font-semibold text-sm text-center" style={{ color: "#282625" }}>{t(key)}</span>
                   </div>
-                  <span className="font-semibold text-sm text-center" style={{ color: "#282625" }}>{t(key)}</span>
-                </div>
 
-                {/* Hover: colorantes recomendados */}
-                <div className="absolute inset-0 flex flex-col justify-center gap-1.5 p-4 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <p className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: "#C38335" }}>{t(key)}</p>
-                  {ids.map((id) => {
-                    const c = colorById[id];
-                    if (!c) return null;
-                    return (
-                      <span key={id} className="inline-flex items-center gap-2 text-xs leading-tight" style={{ color: "rgba(40,38,37,0.80)" }}>
-                        <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: c.hex }} />
-                        {c.nombre[lang]}
+                  {/* Hover: colorantes recomendados */}
+                  <div className="absolute inset-0 flex flex-col justify-center gap-1.5 p-4 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p className="text-[10px] font-bold tracking-widest uppercase mb-1" style={{ color: "#C38335" }}>{t(key)}</p>
+                    {ids.map((id) => {
+                      const c = colorById[id];
+                      if (!c) return null;
+                      return (
+                        <span key={id} className="inline-flex items-center gap-2 text-xs leading-tight" style={{ color: "rgba(40,38,37,0.80)" }}>
+                          <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: c.hex }} />
+                          {c.nombre[lang]}
+                        </span>
+                      );
+                    })}
+                    {href && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold mt-1.5" style={{ color: "#5A102D" }}>
+                        Ver soluciones <ArrowRight size={12} />
                       </span>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
+                    )}
+                  </div>
+                </>
+              );
+              return href ? (
+                <Link key={key} href={href} className={cardClass} style={{ backgroundColor: "#ffffff" }}>{inner}</Link>
+              ) : (
+                <div key={key} className={cardClass} style={{ backgroundColor: "#ffffff" }}>{inner}</div>
+              );
+            })}
           </div>
         </div>
       </section>
