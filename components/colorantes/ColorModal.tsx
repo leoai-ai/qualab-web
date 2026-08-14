@@ -47,7 +47,6 @@ export default function ColorModal({ color, lang, contactHref, labels, onClose }
 
   const specs: { label: string; value: string }[] = [];
   if (color.pigmento) specs.push({ label: labels.pigmento, value: color.pigmento[lang] });
-  if (color.intensidad) specs.push({ label: labels.intensidad, value: color.intensidad });
   if (color.ph) specs.push({ label: labels.ph, value: color.ph[lang] });
   if (color.dosis) specs.push({ label: labels.dosis, value: color.dosis });
   if (color.formato) specs.push({ label: labels.formato, value: color.formato[lang] });

@@ -51,11 +51,11 @@ export default function IngredientesPage() {
 
   return (
     <>
-      {/* ── HERO con foto de fondo (estilo Colorantes) ── */}
-      <section className="relative min-h-[52vh] sm:min-h-[60vh] flex items-start overflow-hidden bg-[#F5F1EA]">
+      {/* ── HERO — foto de fondo a pantalla completa, sin caja ni banner separado. */}
+      <section className="relative min-h-[52vh] sm:min-h-[60vh] lg:min-h-[68vh] flex items-start overflow-hidden bg-[#F5F1EA]">
         {/* Foto de fondo */}
         <div
-          className="absolute inset-0 bg-cover bg-left md:bg-right"
+          className="absolute inset-0 bg-cover bg-left lg:bg-right"
           style={{ backgroundImage: "url('/ingredientes-fondo.webp')" }}
         />
         {/* Velo claro superior */}
@@ -74,13 +74,14 @@ export default function IngredientesPage() {
               "linear-gradient(95deg, rgba(245,241,234,0.95) 0%, rgba(245,241,234,0.72) 30%, rgba(245,241,234,0.22) 54%, transparent 72%)",
           }}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
+
+        <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 pt-24 pb-10 sm:pt-28 sm:pb-12">
           <div className="max-w-xl">
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: "#C38335" }}>
               {t("hero.eyebrow")}
             </p>
             <h1
-              className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.08] tracking-tight mb-5"
+              className="text-4xl sm:text-5xl lg:text-[4.1rem] 2xl:text-[4.6rem] font-bold leading-[1.1] tracking-tight mb-5"
               style={{
                 backgroundImage: "linear-gradient(95deg, #5C2D6B 0%, #5A102D 55%, #7A1834 100%)",
                 WebkitBackgroundClip: "text",
@@ -89,9 +90,13 @@ export default function IngredientesPage() {
                 width: "fit-content",
               }}
             >
-              {t("hero.headline")}
+              {t("hero.headline").split("\n").map((line, i) => (
+                <span key={i} style={{ display: "block", whiteSpace: "nowrap" }}>
+                  {line}
+                </span>
+              ))}
             </h1>
-            <p className="text-lg sm:text-xl leading-relaxed max-w-lg" style={{ color: "#000000" }}>
+            <p className="text-xl sm:text-2xl leading-relaxed" style={{ color: "#000000" }}>
               {t("hero.subtitle")}
             </p>
           </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, Sparkles, Clock, Feather, Droplets, CupSoda, Candy, Milk, Croissant, IceCreamCone, Cookie } from "lucide-react";
 import ColorantesGallery from "@/components/colorantes/ColorantesGallery";
+import HoverZoomCard from "@/components/industrias/HoverZoomCard";
 import { COLORANTES } from "@/lib/colores";
 
 export async function generateMetadata({
@@ -53,36 +54,31 @@ export default function ColorantesPage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-[58vh] sm:min-h-[68vh] flex items-start overflow-hidden bg-[#F5F1EA]">
-        {/* Foto de fondo */}
+      <section className="relative min-h-[58vh] sm:min-h-[68vh] lg:min-h-[82vh] flex items-start overflow-hidden bg-[#F5F1EA]">
+        {/* Foto — caja pegada abajo a la derecha, imagen completa sin recortar (mismo aspect ratio que la foto: 1774/887, ~2:1). Oculta hasta "lg" para no apretar el texto en tablet. */}
         <div
-          className="absolute inset-0 bg-cover"
-          style={{ backgroundImage: "url('/colorantes-hero.jpg')", backgroundPosition: "center bottom" }}
-        />
-        {/* Scrim superior */}
-        <div
-          className="absolute inset-0"
+          className="hidden lg:block absolute right-0 bottom-0 bg-no-repeat bg-contain bg-right-bottom lg:w-[43%] xl:w-[64%] 2xl:w-[82%]"
           style={{
-            background:
-              "linear-gradient(180deg, rgba(245,241,234,0.85) 0%, rgba(245,241,234,0.45) 30%, rgba(245,241,234,0.05) 55%, transparent 72%)",
+            aspectRatio: "1774 / 887",
+            backgroundImage: "url('/colorantes-hero4.png')",
           }}
         />
-        {/* Scrim izquierdo */}
+        {/* Degradé sutil en el borde izquierdo de la foto, para que no se sienta un corte duro */}
         <div
-          className="absolute inset-0"
+          className="hidden lg:block absolute right-0 bottom-0 lg:w-[43%] xl:w-[64%] 2xl:w-[82%]"
           style={{
-            background:
-              "linear-gradient(95deg, rgba(245,241,234,0.92) 0%, rgba(245,241,234,0.68) 30%, rgba(245,241,234,0.18) 52%, transparent 70%)",
+            aspectRatio: "1774 / 887",
+            background: "linear-gradient(90deg, rgba(245,241,234,0.9) 0%, transparent 12%)",
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-12 sm:pt-36 sm:pb-16">
+        <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 pt-28 pb-12 sm:pt-36 sm:pb-16">
           <div className="max-w-2xl">
             <p className="inline-flex items-center gap-3 text-xs font-semibold tracking-widest uppercase mb-5" style={{ color: "#C38335" }}>
               {t("eyebrow")}
             </p>
             <h1
-              className="text-4xl sm:text-5xl lg:text-[3.7rem] font-bold leading-[1.07] tracking-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-[4.1rem] 2xl:text-[4.6rem] font-bold leading-[1.1] tracking-tight mb-6"
               style={{
                 backgroundImage:
                   "linear-gradient(95deg, #482557 0%, #7A1834 28%, #B71D48 52%, #C2185B 68%, #E07030 100%)",
@@ -92,9 +88,13 @@ export default function ColorantesPage() {
                 width: "fit-content",
               }}
             >
-              {t("headline")}
+              {t("headline").split("\n").map((line, i) => (
+                <span key={i} style={{ display: "block", whiteSpace: "nowrap" }}>
+                  {line}
+                </span>
+              ))}
             </h1>
-            <p className="text-lg sm:text-xl leading-relaxed max-w-xl mb-8" style={{ color: "#000000" }}>
+            <p className="text-xl sm:text-2xl leading-relaxed mb-8" style={{ color: "#000000" }}>
               {t("intro")}
             </p>
             <a
@@ -148,13 +148,13 @@ export default function ColorantesPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ventajas.map(({ Icon, key }) => (
-              <div key={key} className="bg-white rounded-2xl p-7 shadow-sm">
+              <HoverZoomCard key={key} className="bg-white rounded-2xl p-7 shadow-sm">
                 <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: "#5A102D15" }}>
                   <Icon size={22} style={{ color: "#5A102D" }} />
                 </div>
                 <h3 className="font-bold mb-2" style={{ color: "#282625" }}>{t(`${key}_title`)}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "rgba(40,38,37,0.65)" }}>{t(`${key}_body`)}</p>
-              </div>
+              </HoverZoomCard>
             ))}
           </div>
         </div>

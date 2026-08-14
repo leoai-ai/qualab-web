@@ -24,7 +24,7 @@ export default function HoverZoomCard({ children, className, style }: Props) {
         transform: hovered ? "scale(1.08)" : "none",
         boxShadow: hovered
           ? "0 25px 35px -8px rgba(0,0,0,0.35), 0 10px 15px -6px rgba(0,0,0,0.3)"
-          : "none",
+          : style?.boxShadow,
         transition: "transform 300ms ease, box-shadow 300ms ease",
       }}
     >
